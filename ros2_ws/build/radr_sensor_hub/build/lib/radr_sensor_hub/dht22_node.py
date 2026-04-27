@@ -6,7 +6,8 @@ import adafruit_dht
 import board
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float32, String
+from sensor_msgs.msg import RelativeHumidity, Temperature
+from std_msgs.msg import String
 
 from .logging_utils import publish_log
 from .storage import SessionStorage
@@ -24,8 +25,8 @@ class DHT22Node(Node):
 
         self.storage = SessionStorage(session_id, "dht22")
         self.sensor = adafruit_dht.DHT22(board.D17, use_pulseio=False)
-        self.temp_pub = self.create_publisher(Float32, "/dht22/temperature_c", 10)
-        self.humid_pub = self.create_publisher(Float32, "/dht22/humidity_percent", 10)
+        self.temp_pub = self.create_publisher(Temperature, "/dht22/temperature_c", 10)
+        self.humid_pub = self.create_publisher(RelativeHumidity, "/dht22/humidity_percent", 10)
         self.log_pub = self.create_publisher(String, "/system/log", 100)
         self.timer = self.create_timer(interval, self.read_and_publish)
         self.get_logger().info(f"DHT22 started. Save target: {self.storage.describe_target()}")
@@ -59,9 +60,19 @@ class DHT22Node(Node):
         now = datetime.now(timezone.utc)
         stamp = now.strftime("%Y-%m-%dT%H:%M:%S.000Z")
         safe = now.strftime("%Y-%m-%dT%H-%M-%S.000Z")
+        ros_stamp = self.get_clock().now().to_msg()
 
-        self.temp_pub.publish(Float32(data=temperature))
-        self.humid_pub.publish(Float32(data=humidity))
+        temp_msg = Temperature()
+        temp_msg.header.stamp = ros_stamp
+        temp_msg.header.frame_id = "dht22_link"
+        temp_msg.temperature = temperature
+        self.temp_pub.publish(temp_msg)
+
+        humid_msg = RelativeHumidity()
+        humid_msg.header.stamp = ros_stamp
+        humid_msg.header.frame_id = "dht22_link"
+        humid_msg.relative_humidity = humidity / 100.0
+        self.humid_pub.publish(humid_msg)
 
         payload = {
             "timestamp_utc": stamp,

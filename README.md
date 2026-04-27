@@ -74,7 +74,7 @@ Current default launch composition (`sensor_suite.launch.py`):
 - `camera_2_node` (`camera_index:=2`)
 - `camera_4_node` (`camera_index:=4`)
 - `camera_5_node` (`camera_index:=5`)
-- `sync_node`
+- `sync_node` (`interval_sec:=10.0`, `retention_sec:=300.0`)
 - `ros2 bag record -a -o <bag_dir>`
 
 ### Run a single node example (camera)
@@ -154,8 +154,9 @@ Launch defaults: `interval_sec=0.5`, `address=104`
 - `interval_sec` (float): Local buffer to SSD sync interval
 - `ssd_base` (string): SSD base path
 - `local_base` (string): Local buffer base path
+- `retention_sec` (float): Keep only recent files in local buffer (`300.0` = last 5 minutes)
 
-Code defaults: `session_unknown`, `10.0`, `/media/radr/Extreme SSD`, `/home/radr/Radr/Data/local_buffer`
+Code defaults: `session_unknown`, `10.0`, `/media/radr/Extreme SSD`, `/home/radr/Radr/Data/local_buffer`, `300.0`
 
 ## 7) Storage location, formats, and how to change storage paths
 
@@ -166,6 +167,7 @@ Based on `storage.py` (`SessionStorage`):
 - If SSD is writable: `/media/radr/Extreme SSD/<session_id>/<subdir>`
 - If SSD is unavailable: `/home/radr/Radr/Data/local_buffer/<session_id>/<subdir>`
 - If SSD appears later, local buffered files are migrated to SSD
+- Local buffer retention policy: files older than `retention_sec` are pruned (default: keep only last 5 minutes)
 
 ### Saved format by sensor
 
@@ -182,6 +184,7 @@ Edit `sensor_suite.launch.py` values passed to `sync_node`:
 
 - `ssd_base:=<new path>`
 - `local_base:=<new path>`
+- `retention_sec:=300.0` (change local buffer retention window, in seconds)
 
 #### 2) Change node-level hardcoded defaults
 
@@ -203,6 +206,7 @@ Edit `-p` values in `sensor_suite.launch.py`:
 - IMU address: `address:=104` -> sensor-specific I2C address
 - DHT22 frequency: `interval_sec:=1.0` -> e.g. `2.0`
 - Sync period: `sync_node interval_sec:=10.0` -> e.g. `30.0`
+- Local buffer retention window: `retention_sec:=300.0` -> e.g. `600.0` (10 minutes)
 
 Quick verification commands:
 
@@ -247,7 +251,36 @@ Important note:
 - This script does **not** subscribe to ROS topics.
 - In this repository, ROS subscription/recording is handled by `ros2 bag record -a`.
 
-## 10) Registering as a startup service (systemd)
+## 10) How to replay recorded rosbag
+
+If you have a recorded session folder like:
+
+- `/media/radr/Extreme SSD/2026-04-27T05-00-43.000Z/rosbag2_all_topics`
+
+Run:
+
+```bash
+source /opt/ros/humble/setup.bash
+cd "/media/radr/Extreme SSD/2026-04-27T05-00-43.000Z/rosbag2_all_topics"
+ros2 bag info .
+ros2 bag play .
+```
+
+Useful replay options:
+
+- 2x speed: `ros2 bag play . -r 2.0`
+- loop: `ros2 bag play . --loop`
+- selected topics only: `ros2 bag play . --topics /camera2/image_raw /imu/data_raw`
+
+Quick replay verification:
+
+```bash
+ros2 topic list
+ros2 topic hz /camera2/image_raw
+ros2 topic echo --once /imu/temperature_c
+```
+
+## 11) Registering as a startup service (systemd)
 
 Related files:
 

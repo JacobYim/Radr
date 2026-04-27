@@ -5,8 +5,8 @@ from datetime import datetime, timezone
 import rclpy
 from mpu6050 import mpu6050
 from rclpy.node import Node
-from sensor_msgs.msg import Imu
-from std_msgs.msg import Float32, String
+from sensor_msgs.msg import Imu, Temperature
+from std_msgs.msg import String
 
 from .logging_utils import publish_log
 from .storage import SessionStorage
@@ -26,7 +26,7 @@ class IMUNode(Node):
         self.storage = SessionStorage(session_id, "imu")
         self.imu = mpu6050(address)
         self.imu_pub = self.create_publisher(Imu, "/imu/data_raw", 10)
-        self.temp_pub = self.create_publisher(Float32, "/imu/temperature_c", 10)
+        self.temp_pub = self.create_publisher(Temperature, "/imu/temperature_c", 10)
         self.log_pub = self.create_publisher(String, "/system/log", 100)
         self.timer = self.create_timer(interval, self.read_and_publish)
         self.get_logger().info(f"MPU6050 started. Save target: {self.storage.describe_target()}")
@@ -56,7 +56,11 @@ class IMUNode(Node):
         imu_msg.angular_velocity.y = float(gyro["y"])
         imu_msg.angular_velocity.z = float(gyro["z"])
         self.imu_pub.publish(imu_msg)
-        self.temp_pub.publish(Float32(data=round(temp, 2)))
+        temp_msg = Temperature()
+        temp_msg.header.stamp = imu_msg.header.stamp
+        temp_msg.header.frame_id = "imu_link"
+        temp_msg.temperature = round(temp, 2)
+        self.temp_pub.publish(temp_msg)
 
         payload = {
             "timestamp_utc": stamp,

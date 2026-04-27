@@ -81,6 +81,8 @@ def generate_launch_description() -> LaunchDescription:
                     f"session_id:={session_id}",
                     "-p",
                     "interval_sec:=10.0",
+                    "-p",
+                    "retention_sec:=300.0",
                 ],
                 output="screen",
                 cwd=package_src,
