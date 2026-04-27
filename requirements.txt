@@ -1,0 +1,6 @@
+adafruit-circuitpython-dht
+mpu6050-raspberrypi
+opencv-python
+RPi.GPIO
+smbus
+smbus2

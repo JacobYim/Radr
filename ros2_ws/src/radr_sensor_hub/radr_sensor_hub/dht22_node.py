@@ -1,0 +1,94 @@
+import json
+import os
+from datetime import datetime, timezone
+
+import adafruit_dht
+import board
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Float32, String
+
+from .logging_utils import publish_log
+from .storage import SessionStorage
+
+
+class DHT22Node(Node):
+    def __init__(self) -> None:
+        super().__init__("dht22_node")
+        self.declare_parameter("session_id", "session_unknown")
+        self.declare_parameter("interval_sec", 1.0)
+
+        session_id = self.get_parameter("session_id").get_parameter_value().string_value
+        interval = self.get_parameter("interval_sec").get_parameter_value().double_value
+
+        self.storage = SessionStorage(session_id, "dht22")
+        self.sensor = adafruit_dht.DHT22(board.D17, use_pulseio=False)
+        self.temp_pub = self.create_publisher(Float32, "/dht22/temperature_c", 10)
+        self.humid_pub = self.create_publisher(Float32, "/dht22/humidity_percent", 10)
+        self.log_pub = self.create_publisher(String, "/system/log", 100)
+        self.timer = self.create_timer(interval, self.read_and_publish)
+        self.get_logger().info(f"DHT22 started. Save target: {self.storage.describe_target()}")
+        publish_log(self.log_pub, "dht22_node", "INFO", "Node started")
+
+    def read_with_retry(self) -> tuple[float, float] | None:
+        for attempt in range(3):
+            try:
+                temperature = self.sensor.temperature
+                humidity = self.sensor.humidity
+                if temperature is None or humidity is None:
+                    raise RuntimeError("sensor returned None")
+                return round(float(temperature), 2), round(float(humidity), 2)
+            except RuntimeError as err:
+                if attempt < 2:
+                    continue
+                self.get_logger().warning(f"DHT22 read failed after retries: {err}")
+                publish_log(self.log_pub, "dht22_node", "ERROR", f"Read failed after retries: {err}")
+                return None
+            except Exception as err:  # pylint: disable=broad-except
+                self.get_logger().warning(f"DHT22 unexpected error: {err}")
+                publish_log(self.log_pub, "dht22_node", "ERROR", f"Unexpected read error: {err}")
+                return None
+        return None
+
+    def read_and_publish(self) -> None:
+        result = self.read_with_retry()
+        if result is None:
+            return
+        temperature, humidity = result
+        now = datetime.now(timezone.utc)
+        stamp = now.strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        safe = now.strftime("%Y-%m-%dT%H-%M-%S.000Z")
+
+        self.temp_pub.publish(Float32(data=temperature))
+        self.humid_pub.publish(Float32(data=humidity))
+
+        payload = {
+            "timestamp_utc": stamp,
+            "temperature_c": temperature,
+            "humidity_percent": humidity,
+        }
+        out_dir = self.storage.get_output_dir()
+        out_path = os.path.join(out_dir, f"{safe}.json")
+        with open(out_path, "w", encoding="utf-8") as file:
+            json.dump(payload, file, indent=2)
+        publish_log(self.log_pub, "dht22_node", "OK", f"Published and saved: {out_path}")
+
+    def destroy_node(self) -> bool:
+        self.sensor.exit()
+        return super().destroy_node()
+
+
+def main() -> None:
+    rclpy.init()
+    node = DHT22Node()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == "__main__":
+    main()
