@@ -1,6 +1,3 @@
 source;share/radr_sensor_hub/hook/pythonpath.ps1
 source;share/radr_sensor_hub/hook/pythonpath.dsv
 source;share/radr_sensor_hub/hook/pythonpath.sh
-source;../../build/radr_sensor_hub/share/radr_sensor_hub/hook/pythonpath_develop.ps1
-source;../../build/radr_sensor_hub/share/radr_sensor_hub/hook/pythonpath_develop.dsv
-source;../../build/radr_sensor_hub/share/radr_sensor_hub/hook/pythonpath_develop.sh
