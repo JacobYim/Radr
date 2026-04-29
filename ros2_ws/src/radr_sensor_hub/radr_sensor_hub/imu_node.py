@@ -1,6 +1,5 @@
 import json
 import os
-from datetime import datetime, timezone
 
 import rclpy
 from mpu6050 import mpu6050
@@ -10,6 +9,7 @@ from std_msgs.msg import String
 
 from .logging_utils import publish_log
 from .storage import SessionStorage
+from .time_utils import now_et
 
 
 class IMUNode(Node):
@@ -42,9 +42,9 @@ class IMUNode(Node):
             publish_log(self.log_pub, "imu_node", "ERROR", f"Read failed: {err}")
             return
 
-        now = datetime.now(timezone.utc)
-        stamp = now.strftime("%Y-%m-%dT%H:%M:%S.000Z")
-        safe = now.strftime("%Y-%m-%dT%H-%M-%S.000Z")
+        now = now_et()
+        stamp = now.isoformat(timespec="seconds")
+        safe = now.strftime("%Y-%m-%dT%H-%M-%S")
 
         imu_msg = Imu()
         imu_msg.header.stamp = self.get_clock().now().to_msg()
@@ -63,7 +63,7 @@ class IMUNode(Node):
         self.temp_pub.publish(temp_msg)
 
         payload = {
-            "timestamp_utc": stamp,
+            "timestamp_et": stamp,
             "accel_g": accel,
             "gyro_deg_s": gyro,
             "temperature_c": round(temp, 2),

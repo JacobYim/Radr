@@ -3,6 +3,7 @@
 import argparse
 import os
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import cv2  # type: ignore
 
@@ -57,6 +58,7 @@ def parse_source(raw_source: str):
 def main() -> None:
     args = parse_args()
     source = parse_source(args.source)
+    et_zone = ZoneInfo("America/New_York")
 
     cap = cv2.VideoCapture(source)
     if not cap.isOpened():
@@ -71,7 +73,7 @@ def main() -> None:
     if args.save:
         output_dir = os.path.abspath(args.output_dir)
         os.makedirs(output_dir, exist_ok=True)
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        timestamp = datetime.now(et_zone).strftime("%Y%m%d_%H%M%S")
         output_path = os.path.join(output_dir, f"preview_{timestamp}.mp4")
 
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")

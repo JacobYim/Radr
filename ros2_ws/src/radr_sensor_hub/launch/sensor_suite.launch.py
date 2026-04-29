@@ -1,12 +1,13 @@
-from datetime import datetime, timezone
 import os
+from zoneinfo import ZoneInfo
+from datetime import datetime
 
 from launch.actions import ExecuteProcess
 from launch import LaunchDescription
 
 
 def generate_launch_description() -> LaunchDescription:
-    session_id = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%S.000Z")
+    session_id = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%dT%H-%M-%S")
     package_src = "/home/radr/Radr/ros2_ws/src/radr_sensor_hub"
     ssd_base = "/media/radr/Extreme SSD"
     local_base = "/home/radr/Radr/Data/local_buffer"

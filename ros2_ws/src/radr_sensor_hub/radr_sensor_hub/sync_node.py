@@ -1,12 +1,12 @@
 import os
 import shutil
-from datetime import datetime, timezone
 
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 
 from .logging_utils import publish_log
+from .time_utils import now_et
 
 
 class SyncNode(Node):
@@ -32,7 +32,7 @@ class SyncNode(Node):
         if self.retention_sec <= 0 or not os.path.isdir(self.local_base):
             return
 
-        cutoff = datetime.now(timezone.utc).timestamp() - self.retention_sec
+        cutoff = now_et().timestamp() - self.retention_sec
         removed_files = 0
 
         for root, _, files in os.walk(self.local_base):
@@ -83,7 +83,7 @@ class SyncNode(Node):
                 dst = os.path.join(target_root, name)
                 if os.path.exists(dst):
                     base, ext = os.path.splitext(name)
-                    stamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+                    stamp = now_et().strftime("%Y%m%d%H%M%S")
                     dst = os.path.join(target_root, f"{base}_{stamp}{ext}")
                 try:
                     shutil.move(src, dst)

@@ -1,7 +1,6 @@
 import json
 import os
 import time
-from datetime import datetime, timezone
 
 import adafruit_dht
 import board
@@ -12,6 +11,7 @@ from std_msgs.msg import String
 
 from .logging_utils import publish_log
 from .storage import SessionStorage
+from .time_utils import now_et
 
 
 class DHT22Node(Node):
@@ -59,9 +59,9 @@ class DHT22Node(Node):
         if result is None:
             return
         temperature, humidity = result
-        now = datetime.now(timezone.utc)
-        stamp = now.strftime("%Y-%m-%dT%H:%M:%S.000Z")
-        safe = now.strftime("%Y-%m-%dT%H-%M-%S.000Z")
+        now = now_et()
+        stamp = now.isoformat(timespec="seconds")
+        safe = now.strftime("%Y-%m-%dT%H-%M-%S")
         ros_stamp = self.get_clock().now().to_msg()
 
         temp_msg = Temperature()
@@ -77,7 +77,7 @@ class DHT22Node(Node):
         self.humid_pub.publish(humid_msg)
 
         payload = {
-            "timestamp_utc": stamp,
+            "timestamp_et": stamp,
             "temperature_c": temperature,
             "humidity_percent": humidity,
         }

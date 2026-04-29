@@ -97,14 +97,14 @@ ros2 run radr_sensor_hub camera_node --ros-args -p session_id:=manual_test -p ca
 
 #### DHT22 (`dht22_node.py`)
 
-- `/dht22/temperature_c` (`std_msgs/Float32`)
-- `/dht22/humidity_percent` (`std_msgs/Float32`)
+- `/dht22/temperature_c` (`sensor_msgs/Temperature`)
+- `/dht22/humidity_percent` (`sensor_msgs/RelativeHumidity`)
 - `/system/log` (`std_msgs/String`)
 
 #### IMU (`imu_node.py`)
 
 - `/imu/data_raw` (`sensor_msgs/Imu`)
-- `/imu/temperature_c` (`std_msgs/Float32`)
+- `/imu/temperature_c` (`sensor_msgs/Temperature`)
 - `/system/log` (`std_msgs/String`)
 
 #### Sync (`sync_node.py`)
@@ -323,4 +323,63 @@ sudo systemctl disable radr-sensor-suite.service
 ```bash
 sudo systemctl enable radr-sensor-suite.service
 sudo systemctl start radr-sensor-suite.service
+```
+
+## 12) Heating pad relay control from DHT22 temperature
+
+This repository also includes a standalone relay controller script:
+
+- `heating_pad_relay_controller.py`
+
+It subscribes to `/dht22/temperature_c` (`sensor_msgs/Temperature`) and controls relay outputs for heating pads:
+
+- Temperature below threshold -> heating pads ON
+- Temperature at/above threshold -> heating pads OFF
+- Hysteresis support is built in to prevent relay chatter
+
+### Wiring (Raspberry Pi 4B, BCM mode)
+
+Relay inputs:
+
+- `IN1 -> GPIO22` (physical pin `15`)
+- `IN2 -> GPIO23` (physical pin `16`)
+- `IN3 -> GPIO24` (physical pin `18`)
+- `IN4 -> GPIO25` (physical pin `22`)
+
+Ground:
+
+- Raspberry Pi `GND` (for example physical pin `6`) -> relay `DC-` / `GND`
+
+Important:
+
+- Most relay modules are active-low (`LOW=ON`, `HIGH=OFF`)
+- Keep Pi ground and relay board ground common
+- Verify relay board power requirements (`VCC`/`JD-VCC`, often 5V on many boards)
+
+### Run the controller
+
+```bash
+source /opt/ros/humble/setup.bash
+source /home/radr/Radr/ros2_ws/install/setup.bash
+python3 /home/radr/Radr/heating_pad_relay_controller.py
+```
+
+### Common run examples
+
+Set cutoff to 26 C (OFF at/above 26, ON below 26):
+
+```bash
+python3 /home/radr/Radr/heating_pad_relay_controller.py --threshold 26 --hysteresis 0.0
+```
+
+Use a custom pin list:
+
+```bash
+python3 /home/radr/Radr/heating_pad_relay_controller.py --pins 22 23 24 25
+```
+
+If your relay module is active-high:
+
+```bash
+python3 /home/radr/Radr/heating_pad_relay_controller.py --active-high
 ```

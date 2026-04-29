@@ -2,7 +2,8 @@
 
 import argparse
 import time
-from datetime import datetime, timezone
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from mpu6050 import mpu6050
 
@@ -29,6 +30,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     imu = mpu6050(args.address)
+    et_zone = ZoneInfo("America/New_York")
 
     print("Start reading MPU6050 (Accel/Gyro/Temp). Press Ctrl+C to stop.")
     print(f"I2C address: 0x{args.address:02X}, interval: {args.interval}s")
@@ -40,7 +42,7 @@ def main() -> None:
                 gyro = imu.get_gyro_data()
                 temp = imu.get_temp()
 
-                now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+                now = datetime.now(et_zone).isoformat(timespec="seconds")
                 print(f"[{now}]")
                 print(
                     f"  Accel  : x={accel['x']:.3f} g, "

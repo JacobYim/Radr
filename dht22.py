@@ -4,11 +4,11 @@ Scheduled DHT-22 saver (temperature + humidity) with retry logic.
 
 CLI
 ----
-python3 dht22.py <startUTC|next> <cycle_period_s> <sample_spacing_s> <num_samples> [save_dir]
+python3 dht22.py <startET|next> <cycle_period_s> <sample_spacing_s> <num_samples> [save_dir]
 
 Examples
 --------
-python3 dht22.py 2026-04-24T10-00-00.000Z 3600 5 60
+python3 dht22.py 2026-04-24T10-00-00 3600 5 60
 python3 dht22.py next                     3600 5 60
 python3 dht22.py next                     3600 5 60 ./Data/TempHumid
 """
@@ -17,22 +17,26 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 import adafruit_dht
 import board
 
 
+ET_ZONE = ZoneInfo("America/New_York")
+
+
 def parse_start(arg: str) -> datetime:
-    """Return aware UTC datetime from e.g. 2026-04-24T10-00-00.000Z."""
+    """Return aware ET datetime from e.g. 2026-04-24T10-00-00."""
     if "T" in arg and "-" in arg.split("T")[1]:
         arg = arg.replace("-", ":", 2)
-    fmt = "%Y-%m-%dT%H:%M:%S.%fZ" if "." in arg else "%Y-%m-%dT%H:%M:%SZ"
-    return datetime.strptime(arg, fmt).replace(tzinfo=timezone.utc)
+    fmt = "%Y-%m-%dT%H:%M:%S.%f" if "." in arg else "%Y-%m-%dT%H:%M:%S"
+    return datetime.strptime(arg, fmt).replace(tzinfo=ET_ZONE)
 
 
 def next_10s_boundary(now: datetime) -> datetime:
-    """Get next UTC second boundary of 00/10/20/30/40/50."""
+    """Get next ET second boundary of 00/10/20/30/40/50."""
     nxt = (now.second // 10 + 1) * 10
     if nxt == 60:
         return (now + timedelta(minutes=1)).replace(second=0, microsecond=0)
@@ -71,7 +75,7 @@ class DHT22Saver:
     def run(self) -> None:
         try:
             while True:
-                now = datetime.now(timezone.utc)
+                now = datetime.now(ET_ZONE)
 
                 if now < self.next_cycle:
                     time.sleep(0.05)
@@ -120,7 +124,7 @@ class DHT22Saver:
         iso = ts.strftime("%Y-%m-%dT%H:%M:%S")
         safe = iso.replace(":", "-")
         data = {
-            "timestamp_utc": iso,
+            "timestamp_et": iso,
             "temperature_c": temperature,
             "humidity_percent": humidity,
         }
@@ -134,11 +138,11 @@ def main(argv: list[str]) -> None:
     if len(argv) not in (4, 5):
         sys.exit(
             "Usage:\n"
-            "  python3 dht22.py <startUTC|next> <cycle_period_s> <sample_spacing_s> <num_samples> [save_dir]"
+            "  python3 dht22.py <startET|next> <cycle_period_s> <sample_spacing_s> <num_samples> [save_dir]"
         )
 
     start_arg = argv[0].lower()
-    start = next_10s_boundary(datetime.now(timezone.utc)) if start_arg == "next" else parse_start(argv[0])
+    start = next_10s_boundary(datetime.now(ET_ZONE)) if start_arg == "next" else parse_start(argv[0])
     cycle_period = int(argv[1])
     step = int(argv[2])
     n_samples = int(argv[3])
