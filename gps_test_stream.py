@@ -6,6 +6,51 @@ import time
 import serial
 
 
+def build_port_candidates(primary: str, fallback_raw: str) -> list[str]:
+    values: list[str] = []
+    for token in [primary, *fallback_raw.split(",")]:
+        port = token.strip()
+        if not port:
+            continue
+        if port not in values:
+            values.append(port)
+    return values
+
+
+def open_serial_with_retry(
+    ports: list[str],
+    baud: int,
+    timeout: float,
+    retry_delay: float,
+) -> tuple[serial.Serial, str]:
+    """
+    Keep trying candidate ports until one is opened.
+    Uses exclusive access when supported to prevent multi-access collisions.
+    """
+    last_error = ""
+    last_log_ts = 0.0
+    while True:
+        for port in ports:
+            try:
+                try:
+                    ser = serial.Serial(port, baud, timeout=timeout, exclusive=True)
+                except TypeError:
+                    ser = serial.Serial(port, baud, timeout=timeout)
+                ser.reset_input_buffer()
+                ser.reset_output_buffer()
+                print(f"[INFO] Connected to {port}@{baud}")
+                return ser, port
+            except (serial.SerialException, OSError) as exc:
+                last_error = f"{port}: {exc}"
+                continue
+
+        now = time.time()
+        if now - last_log_ts >= 2.0:
+            print(f"[WARN] Unable to open GPS serial port ({last_error}). Retrying...")
+            last_log_ts = now
+        time.sleep(max(0.1, retry_delay))
+
+
 def dm_to_dd(dm: str, direction: str):
     """Convert NMEA ddmm.mmmm (or dddmm.mmmm) to decimal degrees."""
     if not dm:
@@ -23,28 +68,56 @@ def dm_to_dd(dm: str, direction: str):
     return dd
 
 
-def stream_raw(ser: serial.Serial):
+def stream_raw(
+    ports: list[str],
+    baud: int,
+    timeout: float,
+    retry_delay: float,
+):
     print("Streaming raw NMEA from GPS... (Ctrl+C to stop)")
+    ser, active_port = open_serial_with_retry(ports, baud, timeout, retry_delay)
+    last_read_warn_ts = 0.0
     while True:
         try:
             line = ser.readline().decode("utf-8", errors="ignore").strip()
-        except serial.SerialException as exc:
-            print(f"[WARN] Serial read error: {exc} (retrying...)")
-            time.sleep(0.5)
+        except (serial.SerialException, OSError) as exc:
+            now = time.time()
+            if now - last_read_warn_ts >= 2.0:
+                print(f"[WARN] Serial read error on {active_port}: {exc} (reconnecting...)")
+                last_read_warn_ts = now
+            try:
+                ser.close()
+            except Exception:
+                pass
+            ser, active_port = open_serial_with_retry(ports, baud, timeout, retry_delay)
             continue
         if line:
             print(line)
 
 
-def stream_pretty(ser: serial.Serial):
+def stream_pretty(
+    ports: list[str],
+    baud: int,
+    timeout: float,
+    retry_delay: float,
+):
     print("Streaming parsed GPS data... (Ctrl+C to stop)")
     last_no_fix_print_ts = 0.0
+    last_read_warn_ts = 0.0
+    ser, active_port = open_serial_with_retry(ports, baud, timeout, retry_delay)
     while True:
         try:
             line = ser.readline().decode("utf-8", errors="ignore").strip()
-        except serial.SerialException as exc:
-            print(f"[WARN] Serial read error: {exc} (retrying...)")
-            time.sleep(0.5)
+        except (serial.SerialException, OSError) as exc:
+            now = time.time()
+            if now - last_read_warn_ts >= 2.0:
+                print(f"[WARN] Serial read error on {active_port}: {exc} (reconnecting...)")
+                last_read_warn_ts = now
+            try:
+                ser.close()
+            except Exception:
+                pass
+            ser, active_port = open_serial_with_retry(ports, baud, timeout, retry_delay)
             continue
         if not line.startswith("$"):
             continue
@@ -80,7 +153,12 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description="GT-U7 NMEA test streamer for Raspberry Pi serial port."
     )
-    parser.add_argument("--port", default="/dev/serial0", help="Serial port path")
+    parser.add_argument("--port", default="/dev/serial0", help="Primary serial port path")
+    parser.add_argument(
+        "--fallback-ports",
+        default="/dev/ttyAMA0",
+        help="Comma-separated fallback serial ports",
+    )
     parser.add_argument("--baud", default=9600, type=int, help="Baud rate")
     parser.add_argument(
         "--mode",
@@ -89,26 +167,24 @@ def parse_args():
         help="raw: print full NMEA, pretty: print parsed fields",
     )
     parser.add_argument("--timeout", default=1.0, type=float, help="Serial timeout (s)")
+    parser.add_argument("--retry-delay", default=0.5, type=float, help="Reconnect retry delay (s)")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
-    try:
-        ser = serial.Serial(args.port, args.baud, timeout=args.timeout)
-    except serial.SerialException as exc:
-        print(f"Failed to open serial port {args.port}: {exc}", file=sys.stderr)
+    ports = build_port_candidates(args.port, args.fallback_ports)
+    if not ports:
+        print("No serial ports configured. Check --port / --fallback-ports.", file=sys.stderr)
         return 1
 
     try:
         if args.mode == "raw":
-            stream_raw(ser)
+            stream_raw(ports, args.baud, args.timeout, args.retry_delay)
         else:
-            stream_pretty(ser)
+            stream_pretty(ports, args.baud, args.timeout, args.retry_delay)
     except KeyboardInterrupt:
         print("\nStopped.")
-    finally:
-        ser.close()
     return 0
 
 
