@@ -1,0 +1,29 @@
+[3.373s] Invoking command in '/home/radr/Radr/ros2_ws/src/radr_sensor_hub': PYTHONPATH=/home/radr/Radr/ros2_ws/build/radr_sensor_hub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/radr_sensor_hub build --build-base /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build install --record /home/radr/Radr/ros2_ws/build/radr_sensor_hub/install.log --single-version-externally-managed install_data
+[4.616s] running egg_info
+[4.620s] writing ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/PKG-INFO
+[4.621s] writing dependency_links to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/dependency_links.txt
+[4.623s] writing entry points to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/entry_points.txt
+[4.625s] writing requirements to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/requires.txt
+[4.626s] writing top-level names to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/top_level.txt
+[4.636s] reading manifest file '../../build/radr_sensor_hub/radr_sensor_hub.egg-info/SOURCES.txt'
+[4.640s] writing manifest file '../../build/radr_sensor_hub/radr_sensor_hub.egg-info/SOURCES.txt'
+[4.642s] running build
+[4.643s] running build_py
+[4.650s] copying radr_sensor_hub/gps_node.py -> /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build/lib/radr_sensor_hub
+[4.654s] running install
+[4.659s] running install_lib
+[4.668s] copying /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build/lib/radr_sensor_hub/gps_node.py -> /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub
+[4.673s] byte-compiling /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/gps_node.py to gps_node.cpython-310.pyc
+[4.680s] running install_data
+[4.681s] copying launch/sensor_suite.launch.py -> /home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/launch
+[4.683s] running install_egg_info
+[4.692s] removing '/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub-0.1.0-py3.10.egg-info' (and everything under it)
+[4.694s] Copying ../../build/radr_sensor_hub/radr_sensor_hub.egg-info to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub-0.1.0-py3.10.egg-info
+[4.702s] running install_scripts
+[4.784s] Installing camera_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[4.785s] Installing dht22_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[4.787s] Installing gps_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[4.788s] Installing imu_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[4.788s] Installing sync_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[4.791s] writing list of installed files to '/home/radr/Radr/ros2_ws/build/radr_sensor_hub/install.log'
+[4.938s] Invoked command in '/home/radr/Radr/ros2_ws/src/radr_sensor_hub' returned '0': PYTHONPATH=/home/radr/Radr/ros2_ws/build/radr_sensor_hub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/radr_sensor_hub build --build-base /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build install --record /home/radr/Radr/ros2_ws/build/radr_sensor_hub/install.log --single-version-externally-managed install_data

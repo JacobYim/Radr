@@ -67,13 +67,13 @@ source /home/radr/Radr/ros2_ws/install/setup.bash
 ros2 launch radr_sensor_hub sensor_suite.launch.py
 ```
 
+`camera_node`는 기본으로 `camera_indices:=auto`, `camera_scan_min:=0`, `camera_scan_max:=23` 범위의 OpenCV 카메라 인덱스를 순회하며, **실제 프레임이 읽히는 디바이스만** `/camera{N}/image_raw`로 퍼블리시합니다. 특정 인덱스만 쓰려면 `camera_indices:=2,4`처럼 나열하면 됩니다.
+
 Current default launch composition (`sensor_suite.launch.py`):
 
 - `dht22_node`
 - `imu_node`
-- `camera_2_node` (`camera_index:=2`)
-- `camera_4_node` (`camera_index:=4`)
-- `camera_5_node` (`camera_index:=5`)
+- `camera_node` (자동 탐지, 인덱스 0–23 후보 중 입력 있는 카만 퍼블리시)
 - `sync_node` (`interval_sec:=10.0`, `retention_sec:=300.0`)
 - `ros2 bag record -a -o <bag_dir>`
 
@@ -82,7 +82,7 @@ Current default launch composition (`sensor_suite.launch.py`):
 ```bash
 source /opt/ros/humble/setup.bash
 source /home/radr/Radr/ros2_ws/install/setup.bash
-ros2 run radr_sensor_hub camera_node --ros-args -p session_id:=manual_test -p camera_index:=2 -p interval_sec:=1.0 -p jpeg_quality:=90
+ros2 run radr_sensor_hub camera_node --ros-args -p camera_indices:=2,4 -p width:=640 -p height:=480 -p fps:=10.0
 ```
 
 ## 5) Published and subscribed data
@@ -91,8 +91,7 @@ ros2 run radr_sensor_hub camera_node --ros-args -p session_id:=manual_test -p ca
 
 #### Camera (`camera_node.py`)
 
-- `/camera/cam_<camera_index>/image/compressed` (`sensor_msgs/CompressedImage`)
-- `/camera/cam_<camera_index>/file_path` (`std_msgs/String`)
+- `/camera<N>/image_raw` (`sensor_msgs/Image`, `encoding=bgr8`)
 - `/system/log` (`std_msgs/String`)
 
 #### DHT22 (`dht22_node.py`)
@@ -123,13 +122,13 @@ Runtime values are overridden by `-p key:=value` in `sensor_suite.launch.py`.
 
 ### Camera (`camera_node.py`)
 
-- `session_id` (string): Session identifier used in output paths
-- `camera_index` (int): OpenCV camera index (`/dev/videoN` mapping)
-- `interval_sec` (float): Capture/publish period in seconds (`Hz = 1 / interval_sec`)
-- `jpeg_quality` (int): JPEG quality (0-100, higher = better quality and larger files)
+- `camera_indices` (string): `auto` 또는 `scan`, 빈 문자열은 `[camera_scan_min, camera_scan_max]` 전체 순회; `2,4`처럼 쉼표로 고정 목록 가능
+- `camera_scan_min` / `camera_scan_max` (int): `camera_indices`가 자동 스캔일 때 포함 범위 (기본 `0`, `23`)
+- `width` / `height` (int): 캡처 해상도
+- `fps` (double): 퍼블리시 주기 (타이머 `1/fps`)
+- `reconnect_interval_sec` (double): 미연결 인덱스 재시도 간격
 
-Code defaults: `session_unknown`, `0`, `1.0`, `90`  
-Launch defaults: `camera_index=2/4/5`, `interval_sec=1.0`, `jpeg_quality=90`
+Code defaults: `auto`, 스캔 `0–23`, `640`, `480`, `60`, `2.0`
 
 ### DHT22 (`dht22_node.py`)
 

@@ -3,7 +3,7 @@
   <name>radr_sensor_hub</name>
   <version>0.1.0</version>
   <description>Publish and store DHT22, MPU6050, and multi-camera data.</description>
-  <maintainer email="radr@localhost">radr</maintainer>
+  <maintainer email="radr@example.com">radr</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_python</buildtool_depend>

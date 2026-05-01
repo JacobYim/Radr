@@ -4,6 +4,7 @@ from datetime import datetime
 
 from launch.actions import ExecuteProcess
 from launch import LaunchDescription
+from launch_ros.actions import Node
 
 
 def generate_launch_description() -> LaunchDescription:
@@ -13,80 +14,87 @@ def generate_launch_description() -> LaunchDescription:
     local_base = "/home/radr/Radr/Data/local_buffer"
     bag_base = ssd_base if os.path.isdir(ssd_base) and os.access(ssd_base, os.W_OK) else local_base
     bag_dir = os.path.join(bag_base, session_id, "rosbag2_all_topics")
+    respawn_delay_sec = 2.0
 
     return LaunchDescription(
         [
-            ExecuteProcess(
-                cmd=[
-                    "python3",
-                    "-m",
-                    "radr_sensor_hub.dht22_node",
-                    "--ros-args",
-                    "-r",
-                    "__node:=dht22_node",
-                    "-p",
-                    f"session_id:={session_id}",
-                    "-p",
-                    "interval_sec:=2.0",
-                ],
+            Node(
+                package="radr_sensor_hub",
+                executable="dht22_node",
+                name="dht22_node",
                 output="screen",
-                cwd=package_src,
+                respawn=True,
+                respawn_delay=respawn_delay_sec,
+                parameters=[
+                    {
+                        "session_id": session_id,
+                        "interval_sec": 2.0,
+                    }
+                ],
             ),
-            ExecuteProcess(
-                cmd=[
-                    "python3",
-                    "-m",
-                    "radr_sensor_hub.imu_node",
-                    "--ros-args",
-                    "-r",
-                    "__node:=imu_node",
-                    "-p",
-                    f"session_id:={session_id}",
-                    "-p",
-                    "interval_sec:=0.02",
-                    "-p",
-                    "address:=104",
-                ],
+            Node(
+                package="radr_sensor_hub",
+                executable="imu_node",
+                name="imu_node",
                 output="screen",
-                cwd=package_src,
+                respawn=True,
+                respawn_delay=respawn_delay_sec,
+                parameters=[
+                    {
+                        "session_id": session_id,
+                        "interval_sec": 0.02,
+                        "address": 104,
+                    }
+                ],
             ),
-            ExecuteProcess(
-                cmd=[
-                    "python3",
-                    "-m",
-                    "radr_sensor_hub.camera_node",
-                    "--ros-args",
-                    "-r",
-                    "__node:=camera_node",
-                    "-p",
-                    "camera_indices:=2,4",
-                    "-p",
-                    "width:=640",
-                    "-p",
-                    "height:=480",
-                    "-p",
-                    "fps:=60.0",
-                ],
+            Node(
+                package="radr_sensor_hub",
+                executable="camera_node",
+                name="camera_node",
                 output="screen",
-                cwd=package_src,
+                respawn=True,
+                respawn_delay=respawn_delay_sec,
+                parameters=[
+                    {
+                        "camera_indices": "2,4",
+                        "width": 640,
+                        "height": 480,
+                        "fps": 60.0,
+                    }
+                ],
             ),
-            ExecuteProcess(
-                cmd=[
-                    "python3",
-                    "-m",
-                    "radr_sensor_hub.sync_node",
-                    "--ros-args",
-                    "-r",
-                    "__node:=sync_node",
-                    "-p",
-                    f"session_id:={session_id}",
-                    "-p",
-                    "interval_sec:=10.0",
-                    "-p",
-                    "retention_sec:=300.0",
-                ],
+            Node(
+                package="radr_sensor_hub",
+                executable="gps_node",
+                name="gps_node",
                 output="screen",
-                cwd=package_src,
+                respawn=True,
+                respawn_delay=respawn_delay_sec,
+                parameters=[
+                    {
+                        "session_id": session_id,
+                        "port": "/dev/ttyAMA0",
+                        "fallback_ports": "/dev/ttyAMA0,/dev/serial0",
+                        "baud": 9600,
+                        "timeout_sec": 1.0,
+                        "reconnect_interval_sec": 2.0,
+                    }
+                ],
+            ),
+            Node(
+                package="radr_sensor_hub",
+                executable="sync_node",
+                name="sync_node",
+                output="screen",
+                respawn=True,
+                respawn_delay=respawn_delay_sec,
+                parameters=[
+                    {
+                        "session_id": session_id,
+                        "interval_sec": 10.0,
+                        "retention_sec": 300.0,
+                    }
+                ],
             ),
             ExecuteProcess(
                 cmd=["ros2", "bag", "record", "-a", "-o", bag_dir],
