@@ -2,6 +2,7 @@
 Description=Radr ROS2 Sensor Suite (auto start on boot)
 After=network-online.target
 Wants=network-online.target
+RequiresMountsFor=/media/radr
 
 [Service]
 Type=simple
@@ -10,7 +11,9 @@ Group=radr
 SupplementaryGroups=dialout video plugdev
 WorkingDirectory=/home/radr/Radr
 Environment=PYTHONUNBUFFERED=1
-ExecStart=/bin/bash -lc 'source /home/radr/Radr/venv/bin/activate && source /opt/ros/humble/setup.bash && exec ros2 launch /home/radr/Radr/ros2_ws/src/radr_sensor_hub/launch/sensor_suite.launch.py'
+# Ensure external SSD is writable before starting ROS launch.
+ExecStartPre=/bin/bash -lc 'test -d "/media/radr/Extreme SSD" -a -w "/media/radr/Extreme SSD"'
+ExecStart=/bin/bash -lc 'source /home/radr/Radr/venv/bin/activate && source /opt/ros/humble/setup.bash && source /home/radr/Radr/ros2_ws/install/setup.bash && exec ros2 launch /home/radr/Radr/ros2_ws/src/radr_sensor_hub/launch/sensor_suite.launch.py'
 Restart=always
 RestartSec=5
 KillSignal=SIGINT
