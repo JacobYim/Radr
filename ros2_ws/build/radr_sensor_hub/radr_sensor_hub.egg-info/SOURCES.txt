@@ -18,4 +18,11 @@ radr_sensor_hub/logging_utils.py
 radr_sensor_hub/storage.py
 radr_sensor_hub/sync_node.py
 radr_sensor_hub/time_utils.py
+radr_sensor_hub.egg-info/PKG-INFO
+radr_sensor_hub.egg-info/SOURCES.txt
+radr_sensor_hub.egg-info/dependency_links.txt
+radr_sensor_hub.egg-info/entry_points.txt
+radr_sensor_hub.egg-info/requires.txt
+radr_sensor_hub.egg-info/top_level.txt
+radr_sensor_hub.egg-info/zip-safe
 resource/radr_sensor_hub

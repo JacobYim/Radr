@@ -41,7 +41,7 @@ class TopicDashboard(Node):
 
         self.states: Dict[str, TopicState] = {
             "/dht22/temperature_c": TopicState(),
-            "/dht22/humidity_percent": TopicState(),
+            "/dht22/humidity": TopicState(),
             "/imu/temperature_c": TopicState(),
             "/imu/data_raw": TopicState(),
             "/gps/fix": TopicState(),
@@ -63,7 +63,7 @@ class TopicDashboard(Node):
         self.create_subscription(Image, "/camera2/image_raw", self._on_cam2, 10)
         self.create_subscription(Image, "/camera4/image_raw", self._on_cam4, 10)
         self.create_subscription(Temperature, "/dht22/temperature_c", self._on_dht_temp, 10)
-        self.create_subscription(RelativeHumidity, "/dht22/humidity_percent", self._on_dht_humid, 10)
+        self.create_subscription(RelativeHumidity, "/dht22/humidity", self._on_dht_humid, 10)
         self.create_subscription(Temperature, "/imu/temperature_c", self._on_imu_temp, 10)
         self.create_subscription(Imu, "/imu/data_raw", self._on_imu, 10)
         self.create_subscription(NavSatFix, "/gps/fix", self._on_gps_fix, 10)
@@ -109,7 +109,7 @@ class TopicDashboard(Node):
         self._set_state("/dht22/temperature_c", f"{msg.temperature:.2f} C")
 
     def _on_dht_humid(self, msg: RelativeHumidity) -> None:
-        self._set_state("/dht22/humidity_percent", f"{msg.relative_humidity * 100.0:.2f} %")
+        self._set_state("/dht22/humidity", f"{msg.relative_humidity * 100.0:.2f} %")
 
     def _on_imu_temp(self, msg: Temperature) -> None:
         self._set_state("/imu/temperature_c", f"{msg.temperature:.2f} C")
@@ -195,7 +195,7 @@ def draw_dashboard(states: Dict[str, TopicState], cam2: Optional[np.ndarray], ca
         "/camera2/image_raw",
         "/camera4/image_raw",
         "/dht22/temperature_c",
-        "/dht22/humidity_percent",
+        "/dht22/humidity",
         "/imu/temperature_c",
         "/imu/data_raw",
         "/gps/fix",
@@ -258,7 +258,7 @@ def main() -> None:
                 "/camera2/image_raw",
                 "/camera4/image_raw",
                 "/dht22/temperature_c",
-                "/dht22/humidity_percent",
+                "/dht22/humidity",
                 "/imu/temperature_c",
                 "/imu/data_raw",
                 "/gps/fix",

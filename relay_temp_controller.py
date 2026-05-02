@@ -89,7 +89,7 @@ def parse_args() -> argparse.Namespace:
         "--pins",
         type=int,
         nargs="+",
-        default=[22, 23, 24, 25],
+        default=[22, 23, 21, 25],
         help="Relay GPIO pins in BCM numbering.",
     )
     parser.add_argument("--setpoint", type=float, default=26.0, help="Setpoint in C.")

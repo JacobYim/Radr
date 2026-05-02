@@ -4,19 +4,19 @@ import RPi.GPIO as GPIO
 import time
 
 # BCM 기준 GPIO 번호
-relay_pins = [22, 23, 24, 25]
+relay_pins = [22, 23, 21, 25]
 # relay_pins = [15, 16, 18, 22]
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-# 초기 OFF (액티브 로우 릴레이 기준: HIGH=OFF, LOW=ON)
+# 초기 OFF (액티브 로우 릴레이 기준: LOW=OFF, LOW=ON)
 for pin in relay_pins:
     GPIO.setup(pin, GPIO.OUT)
-    GPIO.output(pin, GPIO.HIGH)
+    GPIO.output(pin, GPIO.LOW)
 
 def all_off():
     for p in relay_pins:
-        GPIO.output(p, GPIO.HIGH)
+        GPIO.output(p, GPIO.LOW)
 
 
 try:
@@ -31,11 +31,11 @@ try:
             time.sleep(0.2)
 
             print(f"CH{idx} ON (GPIO {pin})")
-            GPIO.output(pin, GPIO.LOW)   # ON
+            GPIO.output(pin, GPIO.HIGH)   # ON
             time.sleep(2)
 
             print(f"CH{idx} OFF (GPIO {pin})")
-            GPIO.output(pin, GPIO.HIGH)  # OFF
+            GPIO.output(pin, GPIO.LOW)  # OFF
             time.sleep(1)
 
 except KeyboardInterrupt:

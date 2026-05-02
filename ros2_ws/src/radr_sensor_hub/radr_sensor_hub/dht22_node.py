@@ -27,7 +27,7 @@ class DHT22Node(Node):
         self.storage = SessionStorage(session_id, "dht22")
         self.sensor = adafruit_dht.DHT22(board.D17, use_pulseio=False)
         self.temp_pub = self.create_publisher(Temperature, "/dht22/temperature_c", 10)
-        self.humid_pub = self.create_publisher(RelativeHumidity, "/dht22/humidity_percent", 10)
+        self.humid_pub = self.create_publisher(RelativeHumidity, "/dht22/humidity", 10)
         self.log_pub = self.create_publisher(String, "/system/log", 100)
         self.timer = self.create_timer(interval, self.read_and_publish)
         self.get_logger().info(f"DHT22 started. Save target: {self.storage.describe_target()}")
