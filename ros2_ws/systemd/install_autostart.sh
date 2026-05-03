@@ -25,4 +25,4 @@ sudo systemctl restart "${SERVICE_NAME}"
 echo
 echo "Service installed and started."
 echo "Status:"
-sudo systemctl status "${SERVICE_NAME}" --no-pager -l
+sudo systemctl status "${SERVICE_NAME}" --no-pager -l || true

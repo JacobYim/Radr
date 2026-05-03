@@ -8,6 +8,7 @@ setup.py
 ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/requires.txt
 ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/top_level.txt
 ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/zip-safe
+config/radr_paths.json
 launch/sensor_suite.launch.py
 radr_sensor_hub/__init__.py
 radr_sensor_hub/camera_node.py
@@ -17,10 +18,15 @@ radr_sensor_hub/gps_serial_open.py
 radr_sensor_hub/imu_node.py
 radr_sensor_hub/logging_utils.py
 radr_sensor_hub/nmea_gps.py
+radr_sensor_hub/path_config.py
 radr_sensor_hub/storage.py
 radr_sensor_hub/sync_node.py
 radr_sensor_hub/time_utils.py
 resource/radr_sensor_hub
+scripts/radr_wake_usb_cameras.sh
 scripts/setup_gps_serial_permissions.sh
+scripts/setup_headless_camera.sh
+systemd/radr-wake-cameras.service
 test/test_nmea_gps.py
 udev/99-radr-gpio-uart-dialout.rules
+udev/99-radr-v4l2-video.rules

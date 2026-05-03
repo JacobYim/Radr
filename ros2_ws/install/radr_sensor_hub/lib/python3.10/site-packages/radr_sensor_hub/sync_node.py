@@ -6,16 +6,18 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 from .logging_utils import publish_log
+from .path_config import load_radr_paths
 from .time_utils import now_et
 
 
 class SyncNode(Node):
     def __init__(self) -> None:
         super().__init__("sync_node")
+        _paths = load_radr_paths()
         self.declare_parameter("session_id", "session_unknown")
         self.declare_parameter("interval_sec", 10.0)
-        self.declare_parameter("ssd_base", "/media/radr/Extreme SSD")
-        self.declare_parameter("local_base", "/home/radr/Radr/Data/local_buffer")
+        self.declare_parameter("ssd_base", _paths["ssd_base"])
+        self.declare_parameter("local_base", _paths["local_base"])
         self.declare_parameter("retention_sec", 300.0)
 
         self.session_id = self.get_parameter("session_id").get_parameter_value().string_value

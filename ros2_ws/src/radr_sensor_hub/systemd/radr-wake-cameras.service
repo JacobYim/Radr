@@ -1,0 +1,12 @@
+[Unit]
+Description=Radr: wake USB V4L2 cameras for headless operation
+After=sysinit.target local-fs.target systemd-udevd.service
+Before=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/radr_wake_usb_cameras.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

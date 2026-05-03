@@ -1,5 +1,6 @@
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/imu_node.py
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/dht22_node.py
+/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/path_config.py
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/__init__.py
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/sync_node.py
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/gps_serial_open.py
@@ -11,6 +12,7 @@
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/camera_node.py
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/__pycache__/imu_node.cpython-310.pyc
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/__pycache__/dht22_node.cpython-310.pyc
+/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/__pycache__/path_config.cpython-310.pyc
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/__pycache__/__init__.cpython-310.pyc
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/__pycache__/sync_node.cpython-310.pyc
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/__pycache__/gps_serial_open.cpython-310.pyc
@@ -23,8 +25,13 @@
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/ament_index/resource_index/packages/radr_sensor_hub
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/package.xml
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/launch/sensor_suite.launch.py
+/home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/config/radr_paths.json
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/scripts/setup_gps_serial_permissions.sh
+/home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/scripts/setup_headless_camera.sh
+/home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/scripts/radr_wake_usb_cameras.sh
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/udev/99-radr-gpio-uart-dialout.rules
+/home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/udev/99-radr-v4l2-video.rules
+/home/radr/Radr/ros2_ws/install/radr_sensor_hub/share/radr_sensor_hub/systemd/radr-wake-cameras.service
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub-0.1.0-py3.10.egg-info/zip-safe
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub-0.1.0-py3.10.egg-info/PKG-INFO
 /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub-0.1.0-py3.10.egg-info/top_level.txt

@@ -1,8 +1,10 @@
 [Unit]
-Description=Radr ROS2 Sensor Suite (auto start on boot)
+Description=Radr ROS2 sensor suite (ros2 launch radr_sensor_hub sensor_suite.launch.py)
+Documentation=file:///home/radr/Radr/README_RUN.md
 After=network-online.target
 Wants=network-online.target
-RequiresMountsFor=/media/radr
+# README_RUN headless camera prerequisite: wake USB cameras before nodes (no-op if unit missing)
+After=radr-wake-cameras.service
 
 [Service]
 Type=simple
@@ -11,9 +13,10 @@ Group=radr
 SupplementaryGroups=dialout video plugdev
 WorkingDirectory=/home/radr/Radr
 Environment=PYTHONUNBUFFERED=1
-# Ensure external SSD is writable before starting ROS launch.
-ExecStartPre=/bin/bash -lc 'test -d "/media/radr/Extreme SSD" -a -w "/media/radr/Extreme SSD"'
-ExecStart=/bin/bash -lc 'source /home/radr/Radr/venv/bin/activate && source /opt/ros/humble/setup.bash && source /home/radr/Radr/ros2_ws/install/setup.bash && exec ros2 launch /home/radr/Radr/ros2_ws/src/radr_sensor_hub/launch/sensor_suite.launch.py'
+# Optional: ROS_SETUP, RADR_PATH_CONFIG (see radr-sensor-suite.default)
+EnvironmentFile=-/etc/default/radr-sensor-suite
+# Same as interactive shell: venv (optional), ROS (ROS_SETUP or humble), workspace, package launch.
+ExecStart=/bin/bash -lc 'if [[ -f /home/radr/Radr/venv/bin/activate ]]; then source /home/radr/Radr/venv/bin/activate; fi; RS="${ROS_SETUP:-/opt/ros/humble/setup.bash}"; source "$RS" && source /home/radr/Radr/ros2_ws/install/setup.bash && exec ros2 launch radr_sensor_hub sensor_suite.launch.py'
 Restart=always
 RestartSec=5
 KillSignal=SIGINT

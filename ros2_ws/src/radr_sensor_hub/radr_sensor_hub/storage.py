@@ -3,13 +3,26 @@ import shutil
 from threading import Lock
 from typing import Optional
 
+from .path_config import load_radr_paths
+
 
 class SessionStorage:
-    def __init__(self, session_id: str, subdir: str) -> None:
+    def __init__(
+        self,
+        session_id: str,
+        subdir: str,
+        *,
+        ssd_base: Optional[str] = None,
+        local_base: Optional[str] = None,
+    ) -> None:
         self.session_id = session_id
         self.subdir = subdir
-        self.ssd_base = "/media/radr/Extreme SSD"
-        self.local_base = "/home/radr/Radr/Data/local_buffer"
+        if ssd_base is None or local_base is None:
+            defaults = load_radr_paths()
+            ssd_base = ssd_base if ssd_base is not None else defaults["ssd_base"]
+            local_base = local_base if local_base is not None else defaults["local_base"]
+        self.ssd_base = ssd_base
+        self.local_base = local_base
         self.lock = Lock()
 
         self.local_dir = os.path.join(self.local_base, self.session_id, self.subdir)

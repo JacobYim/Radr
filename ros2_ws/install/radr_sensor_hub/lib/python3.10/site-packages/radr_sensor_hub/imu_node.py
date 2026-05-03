@@ -8,6 +8,7 @@ from sensor_msgs.msg import Imu, Temperature
 from std_msgs.msg import String
 
 from .logging_utils import publish_log
+from .path_config import load_radr_paths
 from .storage import SessionStorage
 from .time_utils import now_et
 
@@ -15,15 +16,20 @@ from .time_utils import now_et
 class IMUNode(Node):
     def __init__(self) -> None:
         super().__init__("imu_node")
+        _paths = load_radr_paths()
         self.declare_parameter("session_id", "session_unknown")
         self.declare_parameter("interval_sec", 0.02)
         self.declare_parameter("address", 0x68)
+        self.declare_parameter("ssd_base", _paths["ssd_base"])
+        self.declare_parameter("local_base", _paths["local_base"])
 
         session_id = self.get_parameter("session_id").get_parameter_value().string_value
         interval = self.get_parameter("interval_sec").get_parameter_value().double_value
         address = self.get_parameter("address").get_parameter_value().integer_value
+        ssd_base = self.get_parameter("ssd_base").get_parameter_value().string_value
+        local_base = self.get_parameter("local_base").get_parameter_value().string_value
 
-        self.storage = SessionStorage(session_id, "imu")
+        self.storage = SessionStorage(session_id, "imu", ssd_base=ssd_base, local_base=local_base)
         self.imu = mpu6050(address)
         self.imu_pub = self.create_publisher(Imu, "/imu/data_raw", 10)
         self.temp_pub = self.create_publisher(Temperature, "/imu/temperature_c", 10)

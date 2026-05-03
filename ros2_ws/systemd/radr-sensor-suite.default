@@ -1,0 +1,9 @@
+# Environment for radr-sensor-suite.service (optional).
+# Install copy: sudo cp radr-sensor-suite.default /etc/default/radr-sensor-suite
+# setup_all_prerequisites.sh creates /etc/default/radr-sensor-suite with ROS_SETUP.
+
+# ROS distribution setup script (setup_all_prerequisites.sh sets this).
+ROS_SETUP=/opt/ros/humble/setup.bash
+
+# Optional: custom JSON for load_radr_paths() (same as interactive shell export).
+# RADR_PATH_CONFIG=/home/radr/Radr/my_radr_paths.json

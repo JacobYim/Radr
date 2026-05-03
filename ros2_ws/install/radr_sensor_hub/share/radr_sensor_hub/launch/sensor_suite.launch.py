@@ -1,20 +1,30 @@
 import os
-from zoneinfo import ZoneInfo
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
-from launch.actions import ExecuteProcess
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
+from launch.actions import ExecuteProcess
 from launch_ros.actions import Node
+
+from radr_sensor_hub.path_config import load_radr_paths
 
 
 def generate_launch_description() -> LaunchDescription:
     session_id = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%dT%H-%M-%S")
-    package_src = "/home/radr/Radr/ros2_ws/src/radr_sensor_hub"
-    ssd_base = "/media/radr/Extreme SSD"
-    local_base = "/home/radr/Radr/Data/local_buffer"
+    paths = load_radr_paths()
+    ssd_base = paths["ssd_base"]
+    local_base = paths["local_base"]
     bag_base = ssd_base if os.path.isdir(ssd_base) and os.access(ssd_base, os.W_OK) else local_base
     bag_dir = os.path.join(bag_base, session_id, "rosbag2_all_topics")
     respawn_delay_sec = 2.0
+
+    try:
+        package_share = get_package_share_directory("radr_sensor_hub")
+    except Exception:
+        package_share = os.getcwd()
+
+    path_params = {"ssd_base": ssd_base, "local_base": local_base}
 
     return LaunchDescription(
         [
@@ -29,6 +39,7 @@ def generate_launch_description() -> LaunchDescription:
                     {
                         "session_id": session_id,
                         "interval_sec": 2.0,
+                        **path_params,
                     }
                 ],
             ),
@@ -44,6 +55,7 @@ def generate_launch_description() -> LaunchDescription:
                         "session_id": session_id,
                         "interval_sec": 0.02,
                         "address": 104,
+                        **path_params,
                     }
                 ],
             ),
@@ -78,6 +90,7 @@ def generate_launch_description() -> LaunchDescription:
                         "baud": 9600,
                         "timeout_sec": 0.05,
                         "reconnect_interval_sec": 2.0,
+                        **path_params,
                     }
                 ],
             ),
@@ -93,13 +106,14 @@ def generate_launch_description() -> LaunchDescription:
                         "session_id": session_id,
                         "interval_sec": 10.0,
                         "retention_sec": 300.0,
+                        **path_params,
                     }
                 ],
             ),
             ExecuteProcess(
                 cmd=["ros2", "bag", "record", "-a", "-o", bag_dir],
                 output="screen",
-                cwd=package_src,
+                cwd=package_share,
             ),
         ]
     )

@@ -10,6 +10,7 @@ from radr_gps_msgs.msg import GpsReport
 from std_msgs.msg import String
 
 from .logging_utils import publish_log
+from .path_config import load_radr_paths
 from .nmea_gps import (
     GpsNmeaState,
     build_summary_lines,
@@ -26,6 +27,7 @@ from .gps_serial_open import open_gps_uart_or_reason, setup_permissions_hint
 class GPSNode(Node):
     def __init__(self) -> None:
         super().__init__("gps_node")
+        _paths = load_radr_paths()
         self.declare_parameter("session_id", "session_unknown")
         self.declare_parameter("port", "/dev/serial0")
         self.declare_parameter("fallback_ports", "/dev/ttyS0,/dev/ttyAMA0")
@@ -39,6 +41,8 @@ class GPSNode(Node):
         self.declare_parameter("frame_id", "gps_link")
         self.declare_parameter("publish_when_uart_closed", True)
         self.declare_parameter("report_topic", "/gps/report")
+        self.declare_parameter("ssd_base", _paths["ssd_base"])
+        self.declare_parameter("local_base", _paths["local_base"])
 
         session_id = self.get_parameter("session_id").get_parameter_value().string_value
         port = self.get_parameter("port").get_parameter_value().string_value
@@ -70,7 +74,9 @@ class GPSNode(Node):
         self.baud = baud
         self.port_candidates = self._build_port_candidates(port, fallback_ports_raw)
 
-        self.storage = SessionStorage(session_id, "gps")
+        ssd_base = self.get_parameter("ssd_base").get_parameter_value().string_value
+        local_base = self.get_parameter("local_base").get_parameter_value().string_value
+        self.storage = SessionStorage(session_id, "gps", ssd_base=ssd_base, local_base=local_base)
         self.report_pub = self.create_publisher(GpsReport, self.report_topic, 10)
         self.log_pub = self.create_publisher(String, "/system/log", 100)
         self.serial: serial.Serial | None = None

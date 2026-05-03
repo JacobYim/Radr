@@ -10,6 +10,7 @@ from sensor_msgs.msg import RelativeHumidity, Temperature
 from std_msgs.msg import String
 
 from .logging_utils import publish_log
+from .path_config import load_radr_paths
 from .storage import SessionStorage
 from .time_utils import now_et
 
@@ -17,14 +18,19 @@ from .time_utils import now_et
 class DHT22Node(Node):
     def __init__(self) -> None:
         super().__init__("dht22_node")
+        _paths = load_radr_paths()
         self.declare_parameter("session_id", "session_unknown")
         # DHT22 is typically reliable at ~0.5 Hz or slower.
         self.declare_parameter("interval_sec", 2.0)
+        self.declare_parameter("ssd_base", _paths["ssd_base"])
+        self.declare_parameter("local_base", _paths["local_base"])
 
         session_id = self.get_parameter("session_id").get_parameter_value().string_value
         interval = self.get_parameter("interval_sec").get_parameter_value().double_value
+        ssd_base = self.get_parameter("ssd_base").get_parameter_value().string_value
+        local_base = self.get_parameter("local_base").get_parameter_value().string_value
 
-        self.storage = SessionStorage(session_id, "dht22")
+        self.storage = SessionStorage(session_id, "dht22", ssd_base=ssd_base, local_base=local_base)
         self.sensor = adafruit_dht.DHT22(board.D17, use_pulseio=False)
         self.temp_pub = self.create_publisher(Temperature, "/dht22/temperature_c", 10)
         self.humid_pub = self.create_publisher(RelativeHumidity, "/dht22/humidity", 10)
