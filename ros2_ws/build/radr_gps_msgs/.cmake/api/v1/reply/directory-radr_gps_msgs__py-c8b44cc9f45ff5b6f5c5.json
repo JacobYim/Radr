@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "radr_gps_msgs__py",
+		"source" : "/home/radr/Radr/ros2_ws/build/radr_gps_msgs/radr_gps_msgs__py"
+	}
+}

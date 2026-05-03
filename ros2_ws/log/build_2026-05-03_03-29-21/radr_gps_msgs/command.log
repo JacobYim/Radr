@@ -1,0 +1,4 @@
+Invoking command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake --build /home/radr/Radr/ros2_ws/build/radr_gps_msgs -- -j4 -l4
+Invoked command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs' returned '0': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake --build /home/radr/Radr/ros2_ws/build/radr_gps_msgs -- -j4 -l4
+Invoking command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake --install /home/radr/Radr/ros2_ws/build/radr_gps_msgs
+Invoked command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs' returned '0': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake --install /home/radr/Radr/ros2_ws/build/radr_gps_msgs

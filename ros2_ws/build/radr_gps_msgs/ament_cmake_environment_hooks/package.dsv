@@ -1,0 +1,4 @@
+source;share/radr_gps_msgs/local_setup.bash
+source;share/radr_gps_msgs/local_setup.dsv
+source;share/radr_gps_msgs/local_setup.sh
+source;share/radr_gps_msgs/local_setup.zsh

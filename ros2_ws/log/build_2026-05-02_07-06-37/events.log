@@ -1,0 +1,82 @@
+[0.000000] (-) TimerEvent: {}
+[0.000405] (radr_sensor_hub) JobQueued: {'identifier': 'radr_sensor_hub', 'dependencies': OrderedDict()}
+[0.001856] (radr_sensor_hub) JobStarted: {'identifier': 'radr_sensor_hub'}
+[0.099189] (-) TimerEvent: {}
+[0.199714] (-) TimerEvent: {}
+[0.300103] (-) TimerEvent: {}
+[0.400508] (-) TimerEvent: {}
+[0.500914] (-) TimerEvent: {}
+[0.601309] (-) TimerEvent: {}
+[0.701693] (-) TimerEvent: {}
+[0.802058] (-) TimerEvent: {}
+[0.902415] (-) TimerEvent: {}
+[1.002844] (-) TimerEvent: {}
+[1.103222] (-) TimerEvent: {}
+[1.203657] (-) TimerEvent: {}
+[1.304178] (-) TimerEvent: {}
+[1.404723] (-) TimerEvent: {}
+[1.505137] (-) TimerEvent: {}
+[1.605500] (-) TimerEvent: {}
+[1.705870] (-) TimerEvent: {}
+[1.806300] (-) TimerEvent: {}
+[1.906709] (-) TimerEvent: {}
+[2.007089] (-) TimerEvent: {}
+[2.107462] (-) TimerEvent: {}
+[2.207901] (-) TimerEvent: {}
+[2.308324] (-) TimerEvent: {}
+[2.408721] (-) TimerEvent: {}
+[2.509197] (-) TimerEvent: {}
+[2.609692] (-) TimerEvent: {}
+[2.710123] (-) TimerEvent: {}
+[2.810594] (-) TimerEvent: {}
+[2.911015] (-) TimerEvent: {}
+[3.011530] (-) TimerEvent: {}
+[3.112673] (-) TimerEvent: {}
+[3.114584] (radr_sensor_hub) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/radr/Radr/ros2_ws/build/radr_sensor_hub/build', '--no-deps', 'symlink_data'], 'cwd': '/home/radr/Radr/ros2_ws/build/radr_sensor_hub', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/radr', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'LANGUAGE': 'en', 'USER': 'radr', 'SSH_CLIENT': '100.82.113.115 63208 22', 'LC_TIME': 'C.UTF-8', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/radr', 'OLDPWD': '/home/radr/Radr/ros2_ws', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-7c5207b9-0291-47ac-bf5d-9f0d36e4027f.sock', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'C.UTF-8', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/radr/Radr/ros2_ws/install', 'ROS_DISTRO': 'humble', 'OVSX_REGISTRY_URL': 'https://open-vsx.org', 'LOGNAME': 'radr', 'FORCE_COLOR': '0', 'VSCODE_HANDLES_SIGPIPE': 'true', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'CURSOR_LAYOUT': 'unifiedAgent', 'XDG_SESSION_CLASS': 'user', 'TERM': 'dumb', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/radr/.local/bin:/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/remote-cli:/home/radr/.local/bin:/opt/ros/humble/bin:/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/remote-cli:/home/radr/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'VSCODE_AGENT_FOLDER': '/home/radr/.cursor-server', 'PAPERSIZE': 'a4', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CURSOR_AGENT': '1', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'LS_COLORS': '', 'AMENT_PREFIX_PATH': '/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'VSCODE_SERVER_SHUTDOWN_TIMEOUT': '300', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LC_IDENTIFICATION': 'C.UTF-8', 'PWD': '/home/radr/Radr/ros2_ws/build/radr_sensor_hub', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '100.82.113.115 63208 100.110.47.15 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/radr/Radr/ros2_ws/build/radr_sensor_hub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:/home/radr/Radr/ros2_ws/build/radr_sensor_hub:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', '_ZO_DOCTOR': '0'}, 'shell': False}
+[3.212839] (-) TimerEvent: {}
+[3.313351] (-) TimerEvent: {}
+[3.413735] (-) TimerEvent: {}
+[3.514120] (-) TimerEvent: {}
+[3.614540] (-) TimerEvent: {}
+[3.714918] (-) TimerEvent: {}
+[3.815294] (-) TimerEvent: {}
+[3.915661] (-) TimerEvent: {}
+[4.016017] (-) TimerEvent: {}
+[4.116420] (-) TimerEvent: {}
+[4.216831] (-) TimerEvent: {}
+[4.317241] (-) TimerEvent: {}
+[4.417618] (-) TimerEvent: {}
+[4.487726] (radr_sensor_hub) StdoutLine: {'line': b'running develop\n'}
+[4.517788] (-) TimerEvent: {}
+[4.618163] (-) TimerEvent: {}
+[4.718556] (-) TimerEvent: {}
+[4.818981] (-) TimerEvent: {}
+[4.919327] (-) TimerEvent: {}
+[5.019718] (-) TimerEvent: {}
+[5.120133] (-) TimerEvent: {}
+[5.220518] (-) TimerEvent: {}
+[5.320890] (-) TimerEvent: {}
+[5.416141] (radr_sensor_hub) StdoutLine: {'line': b'running egg_info\n'}
+[5.417470] (radr_sensor_hub) StdoutLine: {'line': b'writing radr_sensor_hub.egg-info/PKG-INFO\n'}
+[5.418451] (radr_sensor_hub) StdoutLine: {'line': b'writing dependency_links to radr_sensor_hub.egg-info/dependency_links.txt\n'}
+[5.421355] (radr_sensor_hub) StdoutLine: {'line': b'writing entry points to radr_sensor_hub.egg-info/entry_points.txt\n'}
+[5.421925] (-) TimerEvent: {}
+[5.422033] (radr_sensor_hub) StdoutLine: {'line': b'writing requirements to radr_sensor_hub.egg-info/requires.txt\n'}
+[5.422870] (radr_sensor_hub) StdoutLine: {'line': b'writing top-level names to radr_sensor_hub.egg-info/top_level.txt\n'}
+[5.431789] (radr_sensor_hub) StdoutLine: {'line': b"reading manifest file 'radr_sensor_hub.egg-info/SOURCES.txt'\n"}
+[5.437619] (radr_sensor_hub) StdoutLine: {'line': b"writing manifest file 'radr_sensor_hub.egg-info/SOURCES.txt'\n"}
+[5.445654] (radr_sensor_hub) StdoutLine: {'line': b'running build_ext\n'}
+[5.446943] (radr_sensor_hub) StdoutLine: {'line': b'Creating /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr-sensor-hub.egg-link (link to .)\n'}
+[5.455851] (radr_sensor_hub) StdoutLine: {'line': b'Installing camera_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[5.456460] (radr_sensor_hub) StdoutLine: {'line': b'Installing dht22_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[5.456934] (radr_sensor_hub) StdoutLine: {'line': b'Installing gps_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[5.458213] (radr_sensor_hub) StdoutLine: {'line': b'Installing imu_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[5.458862] (radr_sensor_hub) StdoutLine: {'line': b'Installing sync_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[5.459910] (radr_sensor_hub) StdoutLine: {'line': b'\n'}
+[5.460399] (radr_sensor_hub) StdoutLine: {'line': b'Installed /home/radr/Radr/ros2_ws/build/radr_sensor_hub\n'}
+[5.461465] (radr_sensor_hub) StdoutLine: {'line': b'running symlink_data\n'}
+[5.522228] (-) TimerEvent: {}
+[5.616877] (radr_sensor_hub) CommandEnded: {'returncode': 0}
+[5.622536] (-) TimerEvent: {}
+[5.684866] (radr_sensor_hub) JobEnded: {'identifier': 'radr_sensor_hub', 'rc': 0}
+[5.687775] (-) EventReactorShutdown: {}

@@ -15,7 +15,8 @@ from cv_bridge import CvBridge
 from rcl_interfaces.msg import Log, ParameterEvent
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
-from sensor_msgs.msg import Image, Imu, NavSatFix, RelativeHumidity, Temperature
+from radr_gps_msgs.msg import GpsReport
+from sensor_msgs.msg import Image, Imu, RelativeHumidity, Temperature
 from std_msgs.msg import String
 
 try:
@@ -35,8 +36,7 @@ TOPIC_ROWS = [
     "/dht22/humidity",
     "/imu/temperature_c",
     "/imu/data_raw",
-    "/gps/fix",
-    "/gps/nmea",
+    "/gps/report",
     "/events/read_split",
     "/events/write_split",
     "/parameter_events",
@@ -69,8 +69,7 @@ class TopicStore(Node):
         self.create_subscription(RelativeHumidity, "/dht22/humidity", self._on_dht_humid, 10)
         self.create_subscription(Temperature, "/imu/temperature_c", self._on_imu_temp, 10)
         self.create_subscription(Imu, "/imu/data_raw", self._on_imu, 10)
-        self.create_subscription(NavSatFix, "/gps/fix", self._on_gps_fix, 10)
-        self.create_subscription(String, "/gps/nmea", self._on_gps_nmea, 50)
+        self.create_subscription(GpsReport, "/gps/report", self._on_gps_report, 10)
         self.create_subscription(String, "/system/log", self._on_system_log, 100)
         self.create_subscription(ParameterEvent, "/parameter_events", self._on_param_event, 50)
         self.create_subscription(Log, "/rosout", self._on_rosout, 100)
@@ -125,11 +124,13 @@ class TopicStore(Node):
         gz = msg.angular_velocity.z
         self._set_state("/imu/data_raw", f"a=({ax:.2f},{ay:.2f},{az:.2f}) g=({gx:.2f},{gy:.2f},{gz:.2f})")
 
-    def _on_gps_fix(self, msg: NavSatFix) -> None:
-        self._set_state("/gps/fix", f"lat={msg.latitude:.6f}, lon={msg.longitude:.6f}, alt={msg.altitude:.2f}")
-
-    def _on_gps_nmea(self, msg: String) -> None:
-        self._set_state("/gps/nmea", msg.data[:120])
+    def _on_gps_report(self, msg: GpsReport) -> None:
+        uart = "uart" if msg.uart_connected else "no_uart"
+        summ = msg.summary_text.replace("\n", " ")[:120]
+        self._set_state(
+            "/gps/report",
+            f"{uart} fix={msg.has_position} lat={msg.latitude:.5f} lon={msg.longitude:.5f} | {summ}",
+        )
 
     def _on_system_log(self, msg: String) -> None:
         self._set_state("/system/log", msg.data[:120])

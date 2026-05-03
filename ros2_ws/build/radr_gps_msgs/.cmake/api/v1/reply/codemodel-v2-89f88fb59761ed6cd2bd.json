@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-b62fe96fcf276113d89b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "radr_gps_msgs__py",
+					"jsonFile" : "directory-radr_gps_msgs__py-c8b44cc9f45ff5b6f5c5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/radr/Radr/ros2_ws/build/radr_gps_msgs/radr_gps_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "radr_gps_msgs__rs",
+					"jsonFile" : "directory-radr_gps_msgs__rs-f4c0351b613ee423186c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/radr/Radr/ros2_ws/build/radr_gps_msgs/radr_gps_msgs__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "radr_gps_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_radr_gps_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_radr_gps_msgs_egg-82f12fd5381e0f61bfbb.json",
+					"name" : "ament_cmake_python_build_radr_gps_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_radr_gps_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_radr_gps_msgs-1b85b2266be2a8cab693.json",
+					"name" : "ament_cmake_python_copy_radr_gps_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs-ec79e8d3449126ae5fbf.json",
+					"name" : "radr_gps_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__cpp-51e77418e2093cc45f18.json",
+					"name" : "radr_gps_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "radr_gps_msgs__py::@13cdd37acca5af7b7fc8",
+					"jsonFile" : "target-radr_gps_msgs__py-85eb8d9195e2601d6f76.json",
+					"name" : "radr_gps_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_generator_c-a6433ec65355d1a167a6.json",
+					"name" : "radr_gps_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_generator_py-276cbaba5a639bd7e2ec.json",
+					"name" : "radr_gps_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_typesupport_c-337f60f472bee66608e9.json",
+					"name" : "radr_gps_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_typesupport_c__pyext-944b6f886ac4b3240d42.json",
+					"name" : "radr_gps_msgs__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_typesupport_cpp-b2c51f7ee80da5414cb8.json",
+					"name" : "radr_gps_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_typesupport_fastrtps_c-87357263d41c79079842.json",
+					"name" : "radr_gps_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_typesupport_fastrtps_c__pyext-da8cfbd3730c3ae0eeba.json",
+					"name" : "radr_gps_msgs__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_typesupport_fastrtps_cpp-a1fc39937244cfa48d49.json",
+					"name" : "radr_gps_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_typesupport_introspection_c-dab0cb8e6197de165adc.json",
+					"name" : "radr_gps_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_typesupport_introspection_c__pyext-f1c5684f9da20dbe2679.json",
+					"name" : "radr_gps_msgs__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs__rosidl_typesupport_introspection_cpp-993ef0f6c5728e6fc162.json",
+					"name" : "radr_gps_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "radr_gps_msgs__rs::@625f536edc7cdd413471",
+					"jsonFile" : "target-radr_gps_msgs__rs-5c9bd8e20cce27eb81db.json",
+					"name" : "radr_gps_msgs__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "radr_gps_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radr_gps_msgs_uninstall-059a4954d930cac15e44.json",
+					"name" : "radr_gps_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-df0fc54aaeadfcc27e38.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/radr/Radr/ros2_ws/build/radr_gps_msgs",
+		"source" : "/home/radr/Radr/ros2_ws/src/radr_gps_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

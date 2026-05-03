@@ -73,10 +73,10 @@ def generate_launch_description() -> LaunchDescription:
                 parameters=[
                     {
                         "session_id": session_id,
-                        "port": "/dev/ttyAMA0",
-                        "fallback_ports": "/dev/ttyAMA0,/dev/serial0",
+                        "port": "/dev/serial0",
+                        "fallback_ports": "/dev/ttyS0,/dev/ttyAMA0",
                         "baud": 9600,
-                        "timeout_sec": 1.0,
+                        "timeout_sec": 0.05,
                         "reconnect_interval_sec": 2.0,
                     }
                 ],

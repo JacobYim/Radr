@@ -1,0 +1,53 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from radr_gps_msgs/msg/GpsReport.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module radr_gps_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Parsed GPS summary (aligned with gps_parsed_live GpsDisplayState / as_lines).")
+    struct GpsReport {
+      std_msgs::msg::Header header;
+
+      string time_utc;
+
+      string date_ddmmyy;
+
+      boolean rmc_valid;
+
+      string gga_fix_code;
+
+      string gga_fix_name;
+
+      double latitude;
+
+      double longitude;
+
+      double altitude_msl;
+
+      string hdop;
+
+      string sats_used;
+
+      string sats_in_view;
+
+      string speed_kn;
+
+      string course_true;
+
+      string speed_kmh;
+
+      boolean has_position;
+
+      boolean uart_connected;
+
+      string active_port;
+
+      @verbatim (language="comment", text=
+        "Multi-line human-readable block (same shape as gps_parsed_live as_lines)")
+      string summary_text;
+    };
+  };
+};

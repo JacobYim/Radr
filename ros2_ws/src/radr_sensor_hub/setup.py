@@ -10,6 +10,8 @@ setup(
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
         ("share/" + package_name, ["package.xml"]),
         ("share/" + package_name + "/launch", ["launch/sensor_suite.launch.py"]),
+        ("share/" + package_name + "/scripts", ["scripts/setup_gps_serial_permissions.sh"]),
+        ("share/" + package_name + "/udev", ["udev/99-radr-gpio-uart-dialout.rules"]),
     ],
     install_requires=["setuptools", "pyserial"],
     zip_safe=True,

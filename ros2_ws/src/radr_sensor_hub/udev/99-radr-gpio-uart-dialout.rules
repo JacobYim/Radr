@@ -1,0 +1,3 @@
+# Raspberry Pi: /dev/serial0 -> ttyS0(mini UART) often stays group tty (0620). dialout users need rw.
+# Used by radr_sensor_hub setup_gps_serial_permissions.sh
+SUBSYSTEM=="tty", KERNEL=="ttyS0", GROUP="dialout", MODE="0660"

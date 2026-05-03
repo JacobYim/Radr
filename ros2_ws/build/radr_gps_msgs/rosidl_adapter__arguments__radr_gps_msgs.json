@@ -1,0 +1,6 @@
+{
+  "package_name": "radr_gps_msgs",
+  "non_idl_tuples": [
+    "/home/radr/Radr/ros2_ws/src/radr_gps_msgs:msg/GpsReport.msg"
+  ]
+}

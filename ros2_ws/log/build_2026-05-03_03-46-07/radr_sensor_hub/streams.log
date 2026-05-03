@@ -1,0 +1,22 @@
+[3.645s] Invoking command in '/home/radr/Radr/ros2_ws/src/radr_sensor_hub': PYTHONPATH=/home/radr/Radr/ros2_ws/build/radr_sensor_hub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/radr_sensor_hub build --build-base /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build install --record /home/radr/Radr/ros2_ws/build/radr_sensor_hub/install.log --single-version-externally-managed install_data
+[5.002s] running egg_info
+[5.005s] writing ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/PKG-INFO
+[5.006s] writing dependency_links to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/dependency_links.txt
+[5.010s] writing entry points to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/entry_points.txt
+[5.010s] writing requirements to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/requires.txt
+[5.011s] writing top-level names to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/top_level.txt
+[5.022s] reading manifest file '../../build/radr_sensor_hub/radr_sensor_hub.egg-info/SOURCES.txt'
+[5.028s] writing manifest file '../../build/radr_sensor_hub/radr_sensor_hub.egg-info/SOURCES.txt'
+[5.029s] running build
+[5.029s] running build_py
+[5.032s] copying radr_sensor_hub/nmea_gps.py -> /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build/lib/radr_sensor_hub
+[5.035s] copying radr_sensor_hub/gps_node.py -> /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build/lib/radr_sensor_hub
+[5.037s] running install
+[5.038s] running install_lib
+[5.043s] copying /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build/lib/radr_sensor_hub/nmea_gps.py -> /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub
+[5.044s] copying /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build/lib/radr_sensor_hub/gps_node.py -> /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub
+[5.049s] byte-compiling /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/nmea_gps.py to nmea_gps.cpython-310.pyc
+[5.056s] byte-compiling /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub/gps_node.py to gps_node.cpython-310.pyc
+[5.064s] running install_data
+[5.066s] error: can't copy 'package.xml': doesn't exist or not a regular file
+[5.208s] Invoked command in '/home/radr/Radr/ros2_ws/src/radr_sensor_hub' returned '1': PYTHONPATH=/home/radr/Radr/ros2_ws/build/radr_sensor_hub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/radr_sensor_hub build --build-base /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build install --record /home/radr/Radr/ros2_ws/build/radr_sensor_hub/install.log --single-version-externally-managed install_data

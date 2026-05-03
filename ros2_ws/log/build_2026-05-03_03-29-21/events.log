@@ -1,0 +1,277 @@
+[0.000000] (-) TimerEvent: {}
+[0.001839] (radr_gps_msgs) JobQueued: {'identifier': 'radr_gps_msgs', 'dependencies': OrderedDict()}
+[0.002507] (radr_sensor_hub) JobQueued: {'identifier': 'radr_sensor_hub', 'dependencies': OrderedDict([('radr_gps_msgs', '/home/radr/Radr/ros2_ws/install/radr_gps_msgs')])}
+[0.003087] (radr_gps_msgs) JobStarted: {'identifier': 'radr_gps_msgs'}
+[0.041050] (radr_gps_msgs) JobProgress: {'identifier': 'radr_gps_msgs', 'progress': 'cmake'}
+[0.044747] (radr_gps_msgs) JobProgress: {'identifier': 'radr_gps_msgs', 'progress': 'build'}
+[0.048292] (radr_gps_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/radr/Radr/ros2_ws/build/radr_gps_msgs', '--', '-j4', '-l4'], 'cwd': '/home/radr/Radr/ros2_ws/build/radr_gps_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en'), ('USER', 'radr'), ('SSH_CLIENT', '100.82.113.115 51246 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/radr'), ('OLDPWD', '/home/radr/Radr'), ('TERM_PROGRAM_VERSION', '3.0.13'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-9e2b2a95-39cf-43d3-8287-b9f90b77c1b2.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'C.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/radr/Radr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('OVSX_REGISTRY_URL', 'https://open-vsx.org'), ('LOGNAME', 'radr'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/remote-cli:/home/radr/.local/bin:/opt/ros/humble/bin:/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/remote-cli:/home/radr/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-5df865b991.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('VSCODE_GIT_IPC_AUTH_TOKEN', '7937d3f32d25298eb50a32ce1de9db28346221541978125a0458dc9928ccd068'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/radr/Radr/ros2_ws/build/radr_gps_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.82.113.115 51246 100.110.47.15 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/radr/Radr/ros2_ws/build/radr_sensor_hub:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble')]), 'shell': False}
+[0.099174] (-) TimerEvent: {}
+[0.200036] (-) TimerEvent: {}
+[0.246145] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_generator_c\x1b[0m\n'}
+[0.281474] (radr_gps_msgs) StdoutLine: {'line': b'[  3%] Built target radr_gps_msgs__rs\n'}
+[0.300255] (-) TimerEvent: {}
+[0.309140] (radr_gps_msgs) StdoutLine: {'line': b'[  6%] Built target radr_gps_msgs__cpp\n'}
+[0.322845] (radr_gps_msgs) StdoutLine: {'line': b'[ 15%] Built target radr_gps_msgs__rosidl_generator_c\n'}
+[0.360705] (radr_gps_msgs) StdoutLine: {'line': b'[ 15%] Built target ament_cmake_python_copy_radr_gps_msgs\n'}
+[0.363811] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[0.387756] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[0.400436] (-) TimerEvent: {}
+[0.408357] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[0.449746] (radr_gps_msgs) StdoutLine: {'line': b'[ 25%] Built target radr_gps_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.471345] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[0.498680] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[0.500613] (-) TimerEvent: {}
+[0.521592] (radr_gps_msgs) StdoutLine: {'line': b'[ 34%] Built target radr_gps_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.539293] (radr_gps_msgs) StdoutLine: {'line': b'[ 43%] Built target radr_gps_msgs__rosidl_typesupport_cpp\n'}
+[0.566048] (radr_gps_msgs) StdoutLine: {'line': b'[ 53%] Built target radr_gps_msgs__rosidl_typesupport_introspection_c\n'}
+[0.597835] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[0.604518] (-) TimerEvent: {}
+[0.605513] (radr_gps_msgs) StdoutLine: {'line': b'[ 62%] Built target radr_gps_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.662594] (radr_gps_msgs) StdoutLine: {'line': b'[ 71%] Built target radr_gps_msgs__rosidl_typesupport_c\n'}
+[0.704699] (-) TimerEvent: {}
+[0.774421] (radr_gps_msgs) StdoutLine: {'line': b'[ 71%] Built target radr_gps_msgs\n'}
+[0.804979] (-) TimerEvent: {}
+[0.867873] (radr_gps_msgs) StdoutLine: {'line': b'[ 75%] Built target radr_gps_msgs__py\n'}
+[0.905148] (-) TimerEvent: {}
+[0.923538] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_generator_py\x1b[0m\n'}
+[1.005366] (-) TimerEvent: {}
+[1.009766] (radr_gps_msgs) StdoutLine: {'line': b'[ 81%] Built target radr_gps_msgs__rosidl_generator_py\n'}
+[1.063617] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[1.091095] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[1.104758] (radr_gps_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target radr_gps_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[1.105415] (-) TimerEvent: {}
+[1.163553] (radr_gps_msgs) StdoutLine: {'line': b'[ 87%] Built target radr_gps_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[1.184435] (radr_gps_msgs) StdoutLine: {'line': b'[ 93%] Built target radr_gps_msgs__rosidl_typesupport_c__pyext\n'}
+[1.190928] (radr_gps_msgs) StdoutLine: {'line': b'[100%] Built target radr_gps_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.205584] (-) TimerEvent: {}
+[1.306325] (-) TimerEvent: {}
+[2.455806] (-) TimerEvent: {}
+[2.459559] (radr_gps_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[2.463447] (radr_gps_msgs) StdoutLine: {'line': b'writing radr_gps_msgs.egg-info/PKG-INFO\n'}
+[2.464836] (radr_gps_msgs) StdoutLine: {'line': b'writing dependency_links to radr_gps_msgs.egg-info/dependency_links.txt\n'}
+[2.466292] (radr_gps_msgs) StdoutLine: {'line': b'writing top-level names to radr_gps_msgs.egg-info/top_level.txt\n'}
+[2.482909] (radr_gps_msgs) StdoutLine: {'line': b"reading manifest file 'radr_gps_msgs.egg-info/SOURCES.txt'\n"}
+[2.487046] (radr_gps_msgs) StdoutLine: {'line': b"writing manifest file 'radr_gps_msgs.egg-info/SOURCES.txt'\n"}
+[2.556113] (-) TimerEvent: {}
+[2.657161] (-) TimerEvent: {}
+[2.660029] (radr_gps_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_radr_gps_msgs_egg\n'}
+[2.711821] (radr_gps_msgs) CommandEnded: {'returncode': 0}
+[2.719535] (radr_gps_msgs) JobProgress: {'identifier': 'radr_gps_msgs', 'progress': 'install'}
+[2.754400] (radr_gps_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/radr/Radr/ros2_ws/build/radr_gps_msgs'], 'cwd': '/home/radr/Radr/ros2_ws/build/radr_gps_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en'), ('USER', 'radr'), ('SSH_CLIENT', '100.82.113.115 51246 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/radr'), ('OLDPWD', '/home/radr/Radr'), ('TERM_PROGRAM_VERSION', '3.0.13'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-9e2b2a95-39cf-43d3-8287-b9f90b77c1b2.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'C.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/radr/Radr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('OVSX_REGISTRY_URL', 'https://open-vsx.org'), ('LOGNAME', 'radr'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/remote-cli:/home/radr/.local/bin:/opt/ros/humble/bin:/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/remote-cli:/home/radr/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-5df865b991.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('VSCODE_GIT_IPC_AUTH_TOKEN', '7937d3f32d25298eb50a32ce1de9db28346221541978125a0458dc9928ccd068'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/radr/Radr/ros2_ws/build/radr_gps_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.82.113.115 51246 100.110.47.15 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/radr/Radr/ros2_ws/build/radr_sensor_hub:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble')]), 'shell': False}
+[2.761774] (-) TimerEvent: {}
+[2.790991] (radr_gps_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.791883] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/rosidl_interfaces/radr_gps_msgs\n'}
+[2.792408] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs\n'}
+[2.792982] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg\n'}
+[2.793388] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.793741] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail\n'}
+[2.794448] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__struct.h\n'}
+[2.795050] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__type_support.h\n'}
+[2.796064] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__functions.c\n'}
+[2.796645] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__functions.h\n'}
+[2.797137] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/gps_report.h\n'}
+[2.797520] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/library_path.sh\n'}
+[2.797880] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/library_path.dsv\n'}
+[2.798584] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_generator_c.so\n'}
+[2.799326] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs\n'}
+[2.800141] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg\n'}
+[2.800766] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail\n'}
+[2.801127] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__rosidl_typesupport_fastrtps_c.h\n'}
+[2.801815] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.803072] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[2.803904] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs\n'}
+[2.804633] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg\n'}
+[2.807777] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[2.809807] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail\n'}
+[2.810929] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__struct.hpp\n'}
+[2.811893] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__type_support.hpp\n'}
+[2.813527] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__builder.hpp\n'}
+[2.814543] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__traits.hpp\n'}
+[2.815133] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/gps_report.hpp\n'}
+[2.816071] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs\n'}
+[2.816861] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg\n'}
+[2.817479] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.818623] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail\n'}
+[2.819312] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/dds_fastrtps\n'}
+[2.820122] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.820961] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.822715] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs\n'}
+[2.829665] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg\n'}
+[2.830310] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail\n'}
+[2.833063] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__type_support.c\n'}
+[2.833622] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__rosidl_typesupport_introspection_c.h\n'}
+[2.834271] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.835285] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_introspection_c.so\n'}
+[2.836689] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_c.so\n'}
+[2.841119] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs\n'}
+[2.841797] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg\n'}
+[2.842294] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail\n'}
+[2.842659] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__type_support.cpp\n'}
+[2.843045] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.843417] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[2.843897] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_cpp.so\n'}
+[2.844332] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/pythonpath.sh\n'}
+[2.844881] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/pythonpath.dsv\n'}
+[2.845559] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info\n'}
+[2.846033] (radr_gps_msgs) StdoutLine: {'line': b'-- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[2.846748] (radr_gps_msgs) StdoutLine: {'line': b'-- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[2.847233] (radr_gps_msgs) StdoutLine: {'line': b'-- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[2.847590] (radr_gps_msgs) StdoutLine: {'line': b'-- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[2.847949] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs\n'}
+[2.848284] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[2.848627] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg\n'}
+[2.848997] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg/_gps_report.py\n'}
+[2.849329] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg/__init__.py\n'}
+[2.849666] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg/_gps_report_s.c\n'}
+[2.850172] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/libradr_gps_msgs__rosidl_generator_py.so\n'}
+[2.851068] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/_radr_gps_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[2.851698] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/_radr_gps_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[2.852471] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/__init__.py\n'}
+[2.852966] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/_radr_gps_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[2.853421] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[2.853884] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[2.862020] (-) TimerEvent: {}
+[2.962828] (-) TimerEvent: {}
+[3.033160] (radr_gps_msgs) StdoutLine: {'line': b"Listing '/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs'...\n"}
+[3.035153] (radr_gps_msgs) StdoutLine: {'line': b"Listing '/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg'...\n"}
+[3.063051] (-) TimerEvent: {}
+[3.063886] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.066923] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.069305] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.072052] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_generator_py.so\n'}
+[3.073757] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/rust_packages/radr_gps_msgs\n'}
+[3.074910] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust\n'}
+[3.076590] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/Cargo.toml\n'}
+[3.077523] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src\n'}
+[3.078873] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src/msg\n'}
+[3.079922] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src/msg/rmw.rs\n'}
+[3.083108] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src/msg.rs\n'}
+[3.084378] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src/lib.rs\n'}
+[3.084858] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/build.rs\n'}
+[3.085287] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/msg/GpsReport.idl\n'}
+[3.085753] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/msg/GpsReport.msg\n'}
+[3.086650] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/package_run_dependencies/radr_gps_msgs\n'}
+[3.087174] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/parent_prefix_path/radr_gps_msgs\n'}
+[3.087629] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/ament_prefix_path.sh\n'}
+[3.088101] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/ament_prefix_path.dsv\n'}
+[3.088556] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/path.sh\n'}
+[3.089004] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/path.dsv\n'}
+[3.089748] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/local_setup.bash\n'}
+[3.090341] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/local_setup.sh\n'}
+[3.092201] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/local_setup.zsh\n'}
+[3.093455] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/local_setup.dsv\n'}
+[3.094753] (radr_gps_msgs) StdoutLine: {'line': b'-- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/package.dsv\n'}
+[3.095642] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/packages/radr_gps_msgs\n'}
+[3.097727] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_cExport.cmake\n'}
+[3.098415] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.100010] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.101151] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[3.101726] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_cppExport.cmake\n'}
+[3.103161] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.103975] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[3.104463] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.105940] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.107062] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_cExport.cmake\n'}
+[3.108696] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.111617] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.113596] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.115803] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[3.117772] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.120519] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_pyExport.cmake\n'}
+[3.122738] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[3.124583] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[3.125925] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.127751] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.129742] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.130545] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.131208] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.132366] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.133308] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgsConfig.cmake\n'}
+[3.134836] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgsConfig-version.cmake\n'}
+[3.135592] (radr_gps_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/package.xml\n'}
+[3.140920] (radr_gps_msgs) CommandEnded: {'returncode': 0}
+[3.163350] (-) TimerEvent: {}
+[3.265208] (-) TimerEvent: {}
+[3.288540] (radr_gps_msgs) JobEnded: {'identifier': 'radr_gps_msgs', 'rc': 0}
+[3.293713] (radr_sensor_hub) JobStarted: {'identifier': 'radr_sensor_hub'}
+[3.365414] (-) TimerEvent: {}
+[3.466366] (-) TimerEvent: {}
+[3.567186] (-) TimerEvent: {}
+[3.668090] (-) TimerEvent: {}
+[3.769039] (-) TimerEvent: {}
+[3.869861] (-) TimerEvent: {}
+[3.970799] (-) TimerEvent: {}
+[4.071686] (-) TimerEvent: {}
+[4.172451] (-) TimerEvent: {}
+[4.273252] (-) TimerEvent: {}
+[4.374202] (-) TimerEvent: {}
+[4.475194] (-) TimerEvent: {}
+[4.576087] (-) TimerEvent: {}
+[4.676885] (-) TimerEvent: {}
+[4.778080] (-) TimerEvent: {}
+[4.879366] (-) TimerEvent: {}
+[4.980396] (-) TimerEvent: {}
+[5.087387] (-) TimerEvent: {}
+[5.189377] (-) TimerEvent: {}
+[5.290631] (-) TimerEvent: {}
+[5.391357] (-) TimerEvent: {}
+[5.492395] (-) TimerEvent: {}
+[5.593919] (-) TimerEvent: {}
+[5.695108] (-) TimerEvent: {}
+[5.795789] (-) TimerEvent: {}
+[5.896477] (-) TimerEvent: {}
+[5.997198] (-) TimerEvent: {}
+[6.097868] (-) TimerEvent: {}
+[6.198595] (-) TimerEvent: {}
+[6.299304] (-) TimerEvent: {}
+[6.399987] (-) TimerEvent: {}
+[6.500660] (-) TimerEvent: {}
+[6.601446] (-) TimerEvent: {}
+[6.702236] (-) TimerEvent: {}
+[6.802927] (-) TimerEvent: {}
+[6.903679] (-) TimerEvent: {}
+[7.005567] (-) TimerEvent: {}
+[7.106432] (-) TimerEvent: {}
+[7.182812] (radr_sensor_hub) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/radr_sensor_hub', 'build', '--build-base', '/home/radr/Radr/ros2_ws/build/radr_sensor_hub/build', 'install', '--record', '/home/radr/Radr/ros2_ws/build/radr_sensor_hub/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/radr/Radr/ros2_ws/src/radr_sensor_hub', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en', 'USER': 'radr', 'SSH_CLIENT': '100.82.113.115 51246 22', 'LC_TIME': 'C.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/radr', 'OLDPWD': '/home/radr/Radr', 'TERM_PROGRAM_VERSION': '3.0.13', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-9e2b2a95-39cf-43d3-8287-b9f90b77c1b2.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'C.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/radr/Radr/ros2_ws/install', 'ROS_DISTRO': 'humble', 'OVSX_REGISTRY_URL': 'https://open-vsx.org', 'LOGNAME': 'radr', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/remote-cli:/home/radr/.local/bin:/opt/ros/humble/bin:/home/radr/.cursor-server/bin/linux-arm64/48a15759f53cd5fc9b5c20936ad7d79847d914b0/bin/remote-cli:/home/radr/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-5df865b991.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/radr/Radr/ros2_ws/install/radr_gps_msgs:/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LC_IDENTIFICATION': 'C.UTF-8', 'VSCODE_GIT_IPC_AUTH_TOKEN': '7937d3f32d25298eb50a32ce1de9db28346221541978125a0458dc9928ccd068', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/radr/Radr/ros2_ws/build/radr_sensor_hub', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '100.82.113.115 51246 100.110.47.15 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/radr/Radr/ros2_ws/build/radr_sensor_hub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages:/home/radr/Radr/ros2_ws/build/radr_sensor_hub:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/radr/Radr/ros2_ws/install/radr_gps_msgs'}, 'shell': False}
+[7.206576] (-) TimerEvent: {}
+[7.307346] (-) TimerEvent: {}
+[7.408084] (-) TimerEvent: {}
+[7.508802] (-) TimerEvent: {}
+[7.609608] (-) TimerEvent: {}
+[7.710499] (-) TimerEvent: {}
+[7.811169] (-) TimerEvent: {}
+[7.911835] (-) TimerEvent: {}
+[8.012515] (-) TimerEvent: {}
+[8.113200] (-) TimerEvent: {}
+[8.213927] (-) TimerEvent: {}
+[8.314678] (-) TimerEvent: {}
+[8.415421] (-) TimerEvent: {}
+[8.467994] (radr_sensor_hub) StdoutLine: {'line': b'running egg_info\n'}
+[8.471106] (radr_sensor_hub) StdoutLine: {'line': b'writing ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/PKG-INFO\n'}
+[8.472363] (radr_sensor_hub) StdoutLine: {'line': b'writing dependency_links to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/dependency_links.txt\n'}
+[8.473595] (radr_sensor_hub) StdoutLine: {'line': b'writing entry points to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/entry_points.txt\n'}
+[8.474801] (radr_sensor_hub) StdoutLine: {'line': b'writing requirements to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/requires.txt\n'}
+[8.475677] (radr_sensor_hub) StdoutLine: {'line': b'writing top-level names to ../../build/radr_sensor_hub/radr_sensor_hub.egg-info/top_level.txt\n'}
+[8.483903] (radr_sensor_hub) StdoutLine: {'line': b"reading manifest file '../../build/radr_sensor_hub/radr_sensor_hub.egg-info/SOURCES.txt'\n"}
+[8.488317] (radr_sensor_hub) StdoutLine: {'line': b"writing manifest file '../../build/radr_sensor_hub/radr_sensor_hub.egg-info/SOURCES.txt'\n"}
+[8.489611] (radr_sensor_hub) StdoutLine: {'line': b'running build\n'}
+[8.490401] (radr_sensor_hub) StdoutLine: {'line': b'running build_py\n'}
+[8.493505] (radr_sensor_hub) StdoutLine: {'line': b'running install\n'}
+[8.495430] (radr_sensor_hub) StdoutLine: {'line': b'running install_lib\n'}
+[8.505109] (radr_sensor_hub) StdoutLine: {'line': b'running install_data\n'}
+[8.506004] (radr_sensor_hub) StdoutLine: {'line': b'running install_egg_info\n'}
+[8.513924] (radr_sensor_hub) StdoutLine: {'line': b"removing '/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub-0.1.0-py3.10.egg-info' (and everything under it)\n"}
+[8.515555] (-) TimerEvent: {}
+[8.517642] (radr_sensor_hub) StdoutLine: {'line': b'Copying ../../build/radr_sensor_hub/radr_sensor_hub.egg-info to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr_sensor_hub-0.1.0-py3.10.egg-info\n'}
+[8.525214] (radr_sensor_hub) StdoutLine: {'line': b'running install_scripts\n'}
+[8.609808] (radr_sensor_hub) StdoutLine: {'line': b'Installing camera_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[8.611114] (radr_sensor_hub) StdoutLine: {'line': b'Installing dht22_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[8.612593] (radr_sensor_hub) StdoutLine: {'line': b'Installing gps_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[8.614385] (radr_sensor_hub) StdoutLine: {'line': b'Installing imu_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[8.616304] (-) TimerEvent: {}
+[8.617900] (radr_sensor_hub) StdoutLine: {'line': b'Installing sync_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub\n'}
+[8.620895] (radr_sensor_hub) StdoutLine: {'line': b"writing list of installed files to '/home/radr/Radr/ros2_ws/build/radr_sensor_hub/install.log'\n"}
+[8.716534] (-) TimerEvent: {}
+[8.759054] (radr_sensor_hub) CommandEnded: {'returncode': 0}
+[8.793116] (radr_sensor_hub) JobEnded: {'identifier': 'radr_sensor_hub', 'rc': 0}
+[8.796294] (-) EventReactorShutdown: {}

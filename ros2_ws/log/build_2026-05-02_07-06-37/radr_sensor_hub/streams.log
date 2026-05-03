@@ -1,0 +1,21 @@
+[3.118s] Invoking command in '/home/radr/Radr/ros2_ws/build/radr_sensor_hub': PYTHONPATH=/home/radr/Radr/ros2_ws/build/radr_sensor_hub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build --no-deps symlink_data
+[4.486s] running develop
+[5.415s] running egg_info
+[5.416s] writing radr_sensor_hub.egg-info/PKG-INFO
+[5.417s] writing dependency_links to radr_sensor_hub.egg-info/dependency_links.txt
+[5.420s] writing entry points to radr_sensor_hub.egg-info/entry_points.txt
+[5.420s] writing requirements to radr_sensor_hub.egg-info/requires.txt
+[5.421s] writing top-level names to radr_sensor_hub.egg-info/top_level.txt
+[5.430s] reading manifest file 'radr_sensor_hub.egg-info/SOURCES.txt'
+[5.436s] writing manifest file 'radr_sensor_hub.egg-info/SOURCES.txt'
+[5.444s] running build_ext
+[5.445s] Creating /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr-sensor-hub.egg-link (link to .)
+[5.454s] Installing camera_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[5.455s] Installing dht22_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[5.456s] Installing gps_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[5.457s] Installing imu_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[5.458s] Installing sync_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+[5.458s] 
+[5.459s] Installed /home/radr/Radr/ros2_ws/build/radr_sensor_hub
+[5.460s] running symlink_data
+[5.616s] Invoked command in '/home/radr/Radr/ros2_ws/build/radr_sensor_hub' returned '0': PYTHONPATH=/home/radr/Radr/ros2_ws/build/radr_sensor_hub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/radr/Radr/ros2_ws/build/radr_sensor_hub/build --no-deps symlink_data

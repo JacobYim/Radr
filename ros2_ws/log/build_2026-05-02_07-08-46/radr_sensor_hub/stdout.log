@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing radr_sensor_hub.egg-info/PKG-INFO
+writing dependency_links to radr_sensor_hub.egg-info/dependency_links.txt
+writing entry points to radr_sensor_hub.egg-info/entry_points.txt
+writing requirements to radr_sensor_hub.egg-info/requires.txt
+writing top-level names to radr_sensor_hub.egg-info/top_level.txt
+reading manifest file 'radr_sensor_hub.egg-info/SOURCES.txt'
+writing manifest file 'radr_sensor_hub.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/python3.10/site-packages/radr-sensor-hub.egg-link (link to .)
+Installing camera_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+Installing dht22_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+Installing gps_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+Installing imu_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+Installing sync_node script to /home/radr/Radr/ros2_ws/install/radr_sensor_hub/lib/radr_sensor_hub
+
+Installed /home/radr/Radr/ros2_ws/build/radr_sensor_hub
+running symlink_data

@@ -1,0 +1,238 @@
+[0.074s] Invoking command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake /home/radr/Radr/ros2_ws/src/radr_gps_msgs -DCMAKE_INSTALL_PREFIX=/home/radr/Radr/ros2_ws/install/radr_gps_msgs
+[1.325s] -- The C compiler identification is GNU 11.4.0
+[2.150s] -- The CXX compiler identification is GNU 11.4.0
+[2.200s] -- Detecting C compiler ABI info
+[2.587s] -- Detecting C compiler ABI info - done
+[2.613s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.615s] -- Detecting C compile features
+[2.619s] -- Detecting C compile features - done
+[2.638s] -- Detecting CXX compiler ABI info
+[3.037s] -- Detecting CXX compiler ABI info - done
+[3.064s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.065s] -- Detecting CXX compile features
+[3.067s] -- Detecting CXX compile features - done
+[3.110s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.967s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[4.828s] -- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)
+[5.226s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[5.290s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[5.376s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[5.484s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.620s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.842s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[7.286s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[9.213s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[10.001s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[10.130s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[10.152s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[10.308s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[10.309s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[10.309s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[10.310s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[10.432s] -- Found PythonExtra: .so  
+[11.204s] -- Configuring done
+[11.442s] -- Generating done
+[11.499s] -- Build files have been written to: /home/radr/Radr/ros2_ws/build/radr_gps_msgs
+[11.532s] Invoked command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs' returned '0': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake /home/radr/Radr/ros2_ws/src/radr_gps_msgs -DCMAKE_INSTALL_PREFIX=/home/radr/Radr/ros2_ws/install/radr_gps_msgs
+[11.534s] Invoking command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake --build /home/radr/Radr/ros2_ws/build/radr_gps_msgs -- -j4 -l4
+[11.724s] [  3%] Generating C code for ROS interfaces
+[11.796s] [  6%] Generating C++ code for ROS interfaces
+[11.834s] [  9%] Generating Rust code for ROS interfaces
+[11.876s] [  9%] Built target ament_cmake_python_copy_radr_gps_msgs
+[13.998s] [  9%] Built target radr_gps_msgs__cpp
+[14.051s] [ 12%] Generating C++ introspection for ROS interfaces
+[14.096s] [ 12%] Built target radr_gps_msgs__rs
+[14.168s] [ 15%] Generating C++ type support dispatch for ROS interfaces
+[14.216s] [ 18%] Building C object CMakeFiles/radr_gps_msgs__rosidl_generator_c.dir/rosidl_generator_c/radr_gps_msgs/msg/detail/gps_report__functions.c.o
+[14.222s] running egg_info
+[14.228s] creating radr_gps_msgs.egg-info
+[14.236s] writing radr_gps_msgs.egg-info/PKG-INFO
+[14.241s] writing dependency_links to radr_gps_msgs.egg-info/dependency_links.txt
+[14.247s] writing top-level names to radr_gps_msgs.egg-info/top_level.txt
+[14.254s] writing manifest file 'radr_gps_msgs.egg-info/SOURCES.txt'
+[14.262s] reading manifest file 'radr_gps_msgs.egg-info/SOURCES.txt'
+[14.271s] writing manifest file 'radr_gps_msgs.egg-info/SOURCES.txt'
+[14.507s] [ 18%] Built target ament_cmake_python_build_radr_gps_msgs_egg
+[14.578s] [ 21%] Generating C++ type support for eProsima Fast-RTPS
+[15.633s] [ 25%] Linking C shared library libradr_gps_msgs__rosidl_generator_c.so
+[15.864s] [ 28%] Building CXX object CMakeFiles/radr_gps_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radr_gps_msgs/msg/detail/gps_report__type_support.cpp.o
+[15.961s] [ 31%] Building CXX object CMakeFiles/radr_gps_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radr_gps_msgs/msg/gps_report__type_support.cpp.o
+[15.994s] [ 31%] Built target radr_gps_msgs__rosidl_generator_c
+[16.070s] [ 34%] Generating C type support dispatch for ROS interfaces
+[17.125s] [ 37%] Building CXX object CMakeFiles/radr_gps_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radr_gps_msgs/msg/detail/dds_fastrtps/gps_report__type_support.cpp.o
+[18.572s] [ 40%] Building CXX object CMakeFiles/radr_gps_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/radr_gps_msgs/msg/gps_report__type_support.cpp.o
+[18.803s] [ 43%] Linking CXX shared library libradr_gps_msgs__rosidl_typesupport_c.so
+[18.815s] [ 46%] Linking CXX shared library libradr_gps_msgs__rosidl_typesupport_cpp.so
+[19.073s] [ 46%] Built target radr_gps_msgs__rosidl_typesupport_cpp
+[19.081s] [ 46%] Built target radr_gps_msgs__rosidl_typesupport_c
+[19.131s] [ 50%] Generating C introspection for ROS interfaces
+[19.143s] [ 53%] Generating C type support for eProsima Fast-RTPS
+[20.124s] [ 56%] Linking CXX shared library libradr_gps_msgs__rosidl_typesupport_introspection_cpp.so
+[20.624s] [ 56%] Built target radr_gps_msgs__rosidl_typesupport_introspection_cpp
+[20.770s] [ 59%] Linking CXX shared library libradr_gps_msgs__rosidl_typesupport_fastrtps_cpp.so
+[21.150s] [ 62%] Building C object CMakeFiles/radr_gps_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radr_gps_msgs/msg/detail/gps_report__type_support.c.o
+[21.175s] [ 65%] Building CXX object CMakeFiles/radr_gps_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radr_gps_msgs/msg/detail/gps_report__type_support_c.cpp.o
+[21.288s] [ 65%] Built target radr_gps_msgs__rosidl_typesupport_fastrtps_cpp
+[21.394s] [ 68%] Linking C shared library libradr_gps_msgs__rosidl_typesupport_introspection_c.so
+[21.535s] [ 68%] Built target radr_gps_msgs__rosidl_typesupport_introspection_c
+[22.905s] [ 71%] Linking CXX shared library libradr_gps_msgs__rosidl_typesupport_fastrtps_c.so
+[23.241s] [ 71%] Built target radr_gps_msgs__rosidl_typesupport_fastrtps_c
+[23.326s] [ 71%] Built target radr_gps_msgs
+[23.416s] [ 75%] Generating Python code for ROS interfaces
+[25.322s] [ 75%] Built target radr_gps_msgs__py
+[25.438s] [ 78%] Building C object CMakeFiles/radr_gps_msgs__rosidl_generator_py.dir/rosidl_generator_py/radr_gps_msgs/msg/_gps_report_s.c.o
+[26.263s] [ 81%] Linking C shared library rosidl_generator_py/radr_gps_msgs/libradr_gps_msgs__rosidl_generator_py.so
+[26.487s] [ 81%] Built target radr_gps_msgs__rosidl_generator_py
+[26.581s] [ 84%] Building C object CMakeFiles/radr_gps_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/radr_gps_msgs/_radr_gps_msgs_s.ep.rosidl_typesupport_introspection_c.c.o
+[26.584s] [ 87%] Building C object CMakeFiles/radr_gps_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/radr_gps_msgs/_radr_gps_msgs_s.ep.rosidl_typesupport_c.c.o
+[26.601s] [ 90%] Building C object CMakeFiles/radr_gps_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/radr_gps_msgs/_radr_gps_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[27.189s] [ 93%] Linking C shared library rosidl_generator_py/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[27.200s] [ 96%] Linking C shared library rosidl_generator_py/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[27.236s] [100%] Linking C shared library rosidl_generator_py/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[27.493s] [100%] Built target radr_gps_msgs__rosidl_typesupport_introspection_c__pyext
+[27.530s] [100%] Built target radr_gps_msgs__rosidl_typesupport_fastrtps_c__pyext
+[27.533s] [100%] Built target radr_gps_msgs__rosidl_typesupport_c__pyext
+[27.575s] Invoked command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs' returned '0': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake --build /home/radr/Radr/ros2_ws/build/radr_gps_msgs -- -j4 -l4
+[27.617s] Invoking command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake --install /home/radr/Radr/ros2_ws/build/radr_gps_msgs
+[27.645s] -- Install configuration: ""
+[27.646s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/rosidl_interfaces/radr_gps_msgs
+[27.648s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs
+[27.650s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg
+[27.650s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_generator_c__visibility_control.h
+[27.652s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail
+[27.653s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__struct.h
+[27.654s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__type_support.h
+[27.655s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__functions.c
+[27.662s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__functions.h
+[27.665s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/gps_report.h
+[27.666s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/library_path.sh
+[27.666s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/library_path.dsv
+[27.667s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_generator_c.so
+[27.668s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_generator_c.so" to ""
+[27.669s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs
+[27.675s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg
+[27.675s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail
+[27.676s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__rosidl_typesupport_fastrtps_c.h
+[27.676s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[27.677s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_fastrtps_c.so
+[27.678s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[27.678s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs
+[27.678s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg
+[27.679s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[27.680s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail
+[27.681s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__struct.hpp
+[27.682s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__type_support.hpp
+[27.682s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__builder.hpp
+[27.683s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__traits.hpp
+[27.684s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/gps_report.hpp
+[27.686s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs
+[27.687s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg
+[27.688s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[27.689s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail
+[27.689s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/dds_fastrtps
+[27.695s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__rosidl_typesupport_fastrtps_cpp.hpp
+[27.699s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_fastrtps_cpp.so
+[27.700s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[27.700s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs
+[27.700s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg
+[27.702s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail
+[27.703s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__type_support.c
+[27.704s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__rosidl_typesupport_introspection_c.h
+[27.704s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[27.708s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_introspection_c.so
+[27.710s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_introspection_c.so" to ""
+[27.711s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_c.so
+[27.714s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_c.so" to ""
+[27.716s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs
+[27.716s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg
+[27.717s] -- Up-to-date: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail
+[27.718s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__type_support.cpp
+[27.719s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/include/radr_gps_msgs/radr_gps_msgs/msg/detail/gps_report__rosidl_typesupport_introspection_cpp.hpp
+[27.721s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_introspection_cpp.so
+[27.725s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[27.726s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_cpp.so
+[27.729s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_typesupport_cpp.so" to ""
+[27.730s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/pythonpath.sh
+[27.732s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/pythonpath.dsv
+[27.733s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info
+[27.735s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info/PKG-INFO
+[27.736s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info/top_level.txt
+[27.738s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info/dependency_links.txt
+[27.740s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs-0.1.0-py3.10.egg-info/SOURCES.txt
+[27.742s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs
+[27.743s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[27.745s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg
+[27.746s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg/_gps_report.py
+[27.748s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg/__init__.py
+[27.750s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg/_gps_report_s.c
+[27.752s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/libradr_gps_msgs__rosidl_generator_py.so
+[27.754s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/_radr_gps_msgs_s.ep.rosidl_typesupport_c.c
+[27.755s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/_radr_gps_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[27.757s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/__init__.py
+[27.759s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/_radr_gps_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[27.760s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[27.762s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[27.964s] Listing '/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs'...
+[27.965s] Compiling '/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/__init__.py'...
+[27.967s] Listing '/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg'...
+[27.968s] Compiling '/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg/__init__.py'...
+[27.969s] Compiling '/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/msg/_gps_report.py'...
+[27.991s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[27.995s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""
+[27.997s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[28.003s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""
+[28.005s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[28.007s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/local/lib/python3.10/dist-packages/radr_gps_msgs/radr_gps_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""
+[28.008s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_generator_py.so
+[28.010s] -- Set runtime path of "/home/radr/Radr/ros2_ws/install/radr_gps_msgs/lib/libradr_gps_msgs__rosidl_generator_py.so" to ""
+[28.011s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/rust_packages/radr_gps_msgs
+[28.013s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust
+[28.014s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/Cargo.toml
+[28.014s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src
+[28.015s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src/msg
+[28.016s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src/msg/rmw.rs
+[28.017s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src/msg.rs
+[28.018s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/src/lib.rs
+[28.019s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/rust/build.rs
+[28.021s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/msg/GpsReport.idl
+[28.022s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/msg/GpsReport.msg
+[28.023s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/package_run_dependencies/radr_gps_msgs
+[28.025s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/parent_prefix_path/radr_gps_msgs
+[28.027s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/ament_prefix_path.sh
+[28.028s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/ament_prefix_path.dsv
+[28.029s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/path.sh
+[28.031s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/environment/path.dsv
+[28.032s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/local_setup.bash
+[28.033s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/local_setup.sh
+[28.035s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/local_setup.zsh
+[28.036s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/local_setup.dsv
+[28.037s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/package.dsv
+[28.039s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/ament_index/resource_index/packages/radr_gps_msgs
+[28.041s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_cExport.cmake
+[28.042s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_cExport-noconfig.cmake
+[28.044s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[28.046s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[28.047s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_cppExport.cmake
+[28.049s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[28.051s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[28.052s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_introspection_cExport.cmake
+[28.054s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[28.056s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_cExport.cmake
+[28.058s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[28.059s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[28.061s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[28.062s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_cppExport.cmake
+[28.064s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[28.069s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_pyExport.cmake
+[28.069s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/export_radr_gps_msgs__rosidl_generator_pyExport-noconfig.cmake
+[28.070s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/rosidl_cmake-extras.cmake
+[28.071s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[28.071s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[28.074s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[28.075s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[28.075s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[28.080s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[28.081s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgsConfig.cmake
+[28.081s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/cmake/radr_gps_msgsConfig-version.cmake
+[28.081s] -- Installing: /home/radr/Radr/ros2_ws/install/radr_gps_msgs/share/radr_gps_msgs/package.xml
+[28.087s] Invoked command in '/home/radr/Radr/ros2_ws/build/radr_gps_msgs' returned '0': CMAKE_PREFIX_PATH=/home/radr/Radr/ros2_ws/install/radr_sensor_hub:/opt/ros/humble /usr/bin/cmake --install /home/radr/Radr/ros2_ws/build/radr_gps_msgs
